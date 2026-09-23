@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Esan Michael Automotive | Lagos</title>
-  <meta name="description" content="Esan Michael Automotive - Professional automotive diagnostics, engine electrical, car electrical, fault diagnosis, starting and charging services in Lagos, Nigeria.">
+
+  <meta
+    name="description"
+    content="Esan Michael Automotive - Professional automotive diagnostics, engine electrical, car electrical, fault diagnosis, starting and charging services in Lagos, Nigeria."
+  >
+
+  <!-- SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <style>
     * {
@@ -513,6 +520,34 @@
       background: #fff;
     }
 
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #bookingStatus {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .success {
+      display: block !important;
+      background: #123d20;
+      color: #6dff99;
+      border: 1px solid #247a3d;
+    }
+
+    .error {
+      display: block !important;
+      background: #401515;
+      color: #ff8b8b;
+      border: 1px solid #8a2929;
+    }
+
     /* LOCATION */
     .location {
       background: #101010;
@@ -629,6 +664,7 @@
 
     /* MOBILE */
     @media (max-width: 900px) {
+
       nav {
         display: none;
       }
@@ -653,6 +689,7 @@
     }
 
     @media (max-width: 600px) {
+
       header {
         padding: 10px 14px;
       }
@@ -729,11 +766,17 @@
     <div class="nav">
 
       <a href="#home" class="brand">
-        <img src="logo.png" alt="Esan Michael Automotive Logo">
+
+        <img
+          src="logo.png"
+          alt="Esan Michael Automotive Logo"
+        >
+
         <div class="brand-text">
           <h2>ESAN MICHAEL</h2>
           <p>AUTOMOTIVE</p>
         </div>
+
       </a>
 
       <nav>
@@ -751,6 +794,7 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
+
     <div class="hero-content">
 
       <img
@@ -772,6 +816,7 @@
       </p>
 
       <div class="buttons">
+
         <a
           class="btn btn-primary"
           href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20want%20to%20book%20a%20vehicle%20service."
@@ -793,23 +838,30 @@
         >
           View Services
         </a>
+
       </div>
 
     </div>
+
   </section>
 
 
   <!-- ABOUT -->
   <section class="about" id="about">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>About Us</small>
+
         <h2>Reliable Automotive Solutions</h2>
+
         <p>
           Quality vehicle electrical and diagnostic services
           focused on finding the real cause of vehicle problems.
         </p>
+
       </div>
 
       <div class="about-grid">
@@ -834,139 +886,188 @@
           </p>
 
           <ul class="about-list">
+
             <li>Professional vehicle diagnostics</li>
             <li>Engine electrical fault diagnosis</li>
             <li>Car electrical repairs</li>
             <li>Starting and charging system checks</li>
             <li>Vehicle inspection</li>
             <li>Customer-focused service</li>
+
           </ul>
 
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
   <!-- SERVICES -->
   <section class="services" id="services">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Our Services</small>
+
         <h2>Automotive Services</h2>
+
         <p>
           Professional services for common vehicle electrical,
           engine and diagnostic problems.
         </p>
+
       </div>
 
       <div class="services-grid">
 
         <div class="service-card">
           <div class="service-icon">🔧</div>
+
           <h3>Computer Diagnostics</h3>
+
           <p>
             Vehicle computer scanning and fault-code diagnosis
             to help identify electronic and engine problems.
           </p>
+
           <div class="price">From ₦10,000</div>
         </div>
 
+
         <div class="service-card">
           <div class="service-icon">⚡</div>
+
           <h3>Engine Electrical</h3>
+
           <p>
             Diagnosis of engine electrical faults including
             sensors, ignition, wiring and control systems.
           </p>
+
           <div class="price">From ₦15,000</div>
         </div>
 
+
         <div class="service-card">
           <div class="service-icon">🔌</div>
+
           <h3>Car Electrical</h3>
+
           <p>
             Electrical fault diagnosis covering vehicle wiring,
             lights, power supply and electrical components.
           </p>
+
           <div class="price">From ₦10,000</div>
         </div>
 
+
         <div class="service-card">
           <div class="service-icon">🚘</div>
+
           <h3>Engine Fault Diagnosis</h3>
+
           <p>
             Professional checks for engine running problems,
             misfires, starting problems and warning lights.
           </p>
+
           <div class="price">From ₦15,000</div>
         </div>
 
+
         <div class="service-card">
           <div class="service-icon">🔋</div>
+
           <h3>Starting & Charging</h3>
+
           <p>
             Diagnosis of starter, battery, alternator and
             charging-system problems.
           </p>
+
           <div class="price">From ₦10,000</div>
         </div>
 
+
         <div class="service-card">
           <div class="service-icon">🔍</div>
+
           <h3>Vehicle Inspection</h3>
+
           <p>
             General vehicle inspection to identify visible
             electrical, engine and mechanical concerns.
           </p>
+
           <div class="price">From ₦10,000</div>
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
   <!-- WHY CHOOSE US -->
   <section class="why">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Why Choose Us</small>
+
         <h2>Built Around Proper Diagnosis</h2>
+
       </div>
 
       <div class="why-grid">
 
         <div class="why-card">
           <div class="number">🔎</div>
+
           <h3>Proper Diagnosis</h3>
+
           <p>
             We focus on identifying the cause of the problem.
           </p>
         </div>
 
+
         <div class="why-card">
           <div class="number">⚙️</div>
+
           <h3>Professional Service</h3>
+
           <p>
             Automotive electrical and diagnostic service.
           </p>
         </div>
 
+
         <div class="why-card">
           <div class="number">📱</div>
+
           <h3>Easy Booking</h3>
+
           <p>
             Contact us directly through WhatsApp or phone.
           </p>
         </div>
 
+
         <div class="why-card">
           <div class="number">📍</div>
+
           <h3>Lagos Based</h3>
+
           <p>
             Serving vehicle owners in Lagos and surrounding areas.
           </p>
@@ -975,64 +1076,89 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!-- TESTIMONIALS -->
   <section class="testimonials">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Customer Experience</small>
+
         <h2>What Customers Say</h2>
+
       </div>
 
       <div class="testimonial-grid">
 
         <div class="testimonial">
+
           <div class="stars">★★★★★</div>
+
           <p>
             "Professional approach and good attention to the
             vehicle problem."
           </p>
+
           <strong>— Customer</strong>
+
         </div>
 
+
         <div class="testimonial">
+
           <div class="stars">★★★★★</div>
+
           <p>
             "The diagnosis helped identify the electrical issue
             with my vehicle."
           </p>
+
           <strong>— Customer</strong>
+
         </div>
 
+
         <div class="testimonial">
+
           <div class="stars">★★★★★</div>
+
           <p>
             "Easy to contact and the service was handled
             professionally."
           </p>
+
           <strong>— Customer</strong>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- PRICING -->
   <section class="pricing" id="pricing">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Service Prices</small>
+
         <h2>Professional Starting Prices</h2>
+
         <p>
           Final price may depend on the vehicle and the nature
           of the fault.
         </p>
+
       </div>
 
       <div class="price-table">
@@ -1070,47 +1196,65 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!-- BOOKING -->
   <section class="booking" id="booking">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Book A Service</small>
+
         <h2>Contact Esan Michael Automotive</h2>
+
         <p>
-          Fill the form and your booking details will open
-          directly in WhatsApp.
+          Submit your details and your booking will be saved
+          securely and sent to WhatsApp.
         </p>
+
       </div>
 
       <div class="booking-grid">
 
+
+        <!-- BOOKING INFORMATION -->
         <div class="booking-info">
 
           <h3>Let's Fix Your Vehicle</h3>
 
           <p>
-            Tell us what is wrong with your vehicle and we will
-            receive your booking details through WhatsApp.
+            Tell us what is wrong with your vehicle and submit
+            your booking. Your details will be saved in our
+            booking system.
           </p>
 
           <div class="contact-item">
+
             <strong>WhatsApp / Phone</strong>
+
             09064203806
+
           </div>
 
           <div class="contact-item">
+
             <strong>Location</strong>
+
             Lagos, Nigeria
+
           </div>
 
           <div class="contact-item">
+
             <strong>Services</strong>
+
             Diagnostics • Engine Electrical • Car Electrical
             • Fault Diagnosis • Starting & Charging
+
           </div>
 
           <a
@@ -1124,115 +1268,204 @@
         </div>
 
 
+        <!-- BOOKING FORM -->
         <form id="bookingForm">
 
           <h3>Service Booking</h3>
 
+
           <div class="form-group">
-            <label for="name">Your Name</label>
+
+            <label for="name">
+              Your Name
+            </label>
+
             <input
               type="text"
               id="name"
               placeholder="Enter your name"
               required
             >
+
           </div>
 
+
           <div class="form-group">
-            <label for="phone">Phone Number</label>
+
+            <label for="phone">
+              Phone Number
+            </label>
+
             <input
               type="tel"
               id="phone"
               placeholder="Enter your phone number"
               required
             >
+
           </div>
 
+
           <div class="form-group">
-            <label for="car">Vehicle</label>
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email (optional)"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="car">
+              Vehicle
+            </label>
+
             <input
               type="text"
               id="car"
               placeholder="Example: Toyota Camry 2012"
               required
             >
+
           </div>
 
+
           <div class="form-group">
-            <label for="service">Service Needed</label>
+
+            <label for="service">
+              Service Needed
+            </label>
 
             <select id="service" required>
-              <option value="">Select a service</option>
+
+              <option value="">
+                Select a service
+              </option>
+
               <option value="Computer Diagnostics">
                 Computer Diagnostics
               </option>
+
               <option value="Engine Electrical">
                 Engine Electrical
               </option>
+
               <option value="Car Electrical">
                 Car Electrical
               </option>
+
               <option value="Engine Fault Diagnosis">
                 Engine Fault Diagnosis
               </option>
+
               <option value="Starting & Charging">
                 Starting & Charging
               </option>
+
               <option value="Vehicle Inspection">
                 Vehicle Inspection
               </option>
+
               <option value="Other">
                 Other
               </option>
+
             </select>
+
           </div>
 
+
           <div class="form-group">
-            <label for="date">Preferred Date</label>
+
+            <label for="date">
+              Preferred Date
+            </label>
+
             <input
               type="date"
               id="date"
               required
             >
+
           </div>
 
+
           <div class="form-group">
-            <label for="message">Describe The Problem</label>
+
+            <label for="time">
+              Preferred Time
+            </label>
+
+            <input
+              type="time"
+              id="time"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Describe The Problem
+            </label>
+
             <textarea
               id="message"
               placeholder="Tell us what is wrong with the vehicle..."
               required
             ></textarea>
+
           </div>
+
 
           <button
             type="submit"
             class="submit-btn"
+            id="submitBtn"
           >
-            SEND BOOKING TO WHATSAPP
+            SAVE BOOKING & SEND TO WHATSAPP
           </button>
+
+
+          <div id="bookingStatus"></div>
 
         </form>
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- LOCATION -->
   <section class="location" id="location">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Our Location</small>
+
         <h2>Find Us In Lagos</h2>
+
         <p>
           Esan Michael Automotive — Lagos, Nigeria.
         </p>
+
       </div>
 
       <div class="location-grid">
+
 
         <div class="location-info">
 
@@ -1258,6 +1491,7 @@
 
         </div>
 
+
         <iframe
           class="map"
           src="https://www.google.com/maps?q=Lagos%2C%20Nigeria&output=embed"
@@ -1269,6 +1503,7 @@
       </div>
 
     </div>
+
   </section>
 
 
@@ -1282,7 +1517,10 @@
       automotive diagnostics and electrical services in Lagos.
     </p>
 
-    <div class="buttons" style="justify-content:center;">
+    <div
+      class="buttons"
+      style="justify-content:center;"
+    >
 
       <a
         class="btn btn-primary"
@@ -1312,7 +1550,9 @@
       alt="Esan Michael Automotive Logo"
     >
 
-    <h3>Esan Michael Automotive</h3>
+    <h3>
+      Esan Michael Automotive
+    </h3>
 
     <p>
       Professional Automotive Diagnostics & Electrical Services
@@ -1363,49 +1603,251 @@
   </a>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- SUPABASE + BOOKING JAVASCRIPT -->
   <script>
+
+    /* =====================================================
+       SUPABASE CONNECTION
+       ===================================================== */
+
+    const SUPABASE_URL =
+      "https://ehcstijbenwinbdypjha.supabase.co";
+
+    const SUPABASE_PUBLISHABLE_KEY =
+      "sb_publishable_oq6VVGAs4a9FGMAIQiTq8Q_GUAgz1qg";
+
+    const supabaseClient =
+      window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_PUBLISHABLE_KEY
+      );
+
+
+    /* =====================================================
+       BOOKING FORM
+       ===================================================== */
+
     document
       .getElementById("bookingForm")
-      .addEventListener("submit", function(event) {
+      .addEventListener("submit", async function(event) {
 
         event.preventDefault();
 
+
+        const submitButton =
+          document.getElementById("submitBtn");
+
+        const statusBox =
+          document.getElementById("bookingStatus");
+
+
+        /* GET FORM VALUES */
+
         const name =
-          document.getElementById("name").value.trim();
+          document
+            .getElementById("name")
+            .value
+            .trim();
 
         const phone =
-          document.getElementById("phone").value.trim();
+          document
+            .getElementById("phone")
+            .value
+            .trim();
+
+        const email =
+          document
+            .getElementById("email")
+            .value
+            .trim();
 
         const car =
-          document.getElementById("car").value.trim();
+          document
+            .getElementById("car")
+            .value
+            .trim();
 
         const service =
-          document.getElementById("service").value;
+          document
+            .getElementById("service")
+            .value;
 
         const date =
-          document.getElementById("date").value;
+          document
+            .getElementById("date")
+            .value;
+
+        const time =
+          document
+            .getElementById("time")
+            .value;
 
         const message =
-          document.getElementById("message").value.trim();
+          document
+            .getElementById("message")
+            .value
+            .trim();
 
-        const whatsappMessage =
-          "Hello Esan Michael Automotive,%0A%0A" +
-          "*NEW SERVICE BOOKING*%0A%0A" +
-          "Name: " + encodeURIComponent(name) + "%0A" +
-          "Phone: " + encodeURIComponent(phone) + "%0A" +
-          "Vehicle: " + encodeURIComponent(car) + "%0A" +
-          "Service: " + encodeURIComponent(service) + "%0A" +
-          "Preferred Date: " + encodeURIComponent(date) + "%0A" +
-          "Problem: " + encodeURIComponent(message);
 
-        const whatsappURL =
-          "https://wa.me/2349064203806?text=" +
-          whatsappMessage;
+        /* CHECK REQUIRED INFORMATION */
 
-        window.open(whatsappURL, "_blank");
+        if (
+          !name ||
+          !phone ||
+          !car ||
+          !service ||
+          !date ||
+          !time ||
+          !message
+        ) {
+
+          statusBox.className = "error";
+
+          statusBox.textContent =
+            "Please fill in all required fields.";
+
+          return;
+        }
+
+
+        /* BUTTON LOADING */
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+          "SAVING BOOKING...";
+
+        statusBox.className = "";
+
+        statusBox.style.display = "none";
+
+
+        try {
+
+          /* =================================================
+             SAVE BOOKING TO SUPABASE
+             ================================================= */
+
+          const { data, error } =
+            await supabaseClient
+              .from("bookings")
+              .insert([
+                {
+                  name: name,
+                  phone: phone,
+                  email: email || null,
+                  service: service,
+                  vehicle: car,
+                  message: message,
+                  booking_date: date,
+                  booking_time: time,
+                  status: "New",
+                  location: "Lagos, Nigeria"
+                }
+              ])
+              .select();
+
+
+          /* SUPABASE ERROR */
+
+          if (error) {
+
+            console.error(
+              "Supabase booking error:",
+              error
+            );
+
+            throw error;
+          }
+
+
+          /* =================================================
+             CREATE WHATSAPP MESSAGE
+             ================================================= */
+
+          const whatsappMessage =
+            "Hello Esan Michael Automotive,\n\n" +
+            "*NEW SERVICE BOOKING*\n\n" +
+            "Name: " + name + "\n" +
+            "Phone: " + phone + "\n" +
+            "Email: " + (email || "Not provided") + "\n" +
+            "Vehicle: " + car + "\n" +
+            "Service: " + service + "\n" +
+            "Preferred Date: " + date + "\n" +
+            "Preferred Time: " + time + "\n" +
+            "Location: Lagos, Nigeria\n" +
+            "Problem: " + message;
+
+
+          const whatsappURL =
+            "https://wa.me/2349064203806?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+          /* SUCCESS MESSAGE */
+
+          statusBox.className = "success";
+
+          statusBox.textContent =
+            "Booking saved successfully! Opening WhatsApp...";
+
+
+          /* OPEN WHATSAPP */
+
+          window.open(
+            whatsappURL,
+            "_blank"
+          );
+
+
+          /* RESET FORM */
+
+          document
+            .getElementById("bookingForm")
+            .reset();
+
+
+          submitButton.disabled = false;
+
+          submitButton.textContent =
+            "SAVE BOOKING & SEND TO WHATSAPP";
+
+
+        } catch (error) {
+
+          console.error(error);
+
+
+          statusBox.className = "error";
+
+          statusBox.textContent =
+            "Booking could not be saved. Please try again or contact us on WhatsApp.";
+
+
+          submitButton.disabled = false;
+
+          submitButton.textContent =
+            "SAVE BOOKING & SEND TO WHATSAPP";
+
+        }
 
       });
+
+
+    /* =====================================================
+       SET MINIMUM DATE TO TODAY
+       ===================================================== */
+
+    const dateInput =
+      document.getElementById("date");
+
+    const today =
+      new Date()
+        .toISOString()
+        .split("T")[0];
+
+    dateInput.min = today;
+
   </script>
 
 </body>
