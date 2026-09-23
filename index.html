@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Esan Michael Automotive | Professional Auto Services</title>
+<title>ESAN MOTORS | Automobile Engineering</title>
 
 <style>
 *{
@@ -16,7 +16,7 @@
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#080808;
+    background:#070707;
     color:#fff;
     line-height:1.6;
 }
@@ -25,9 +25,9 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(8,8,8,.97);
-    border-bottom:1px solid #333;
-    padding:15px 20px;
+    background:rgba(5,5,5,.97);
+    border-bottom:1px solid #292929;
+    padding:10px 18px;
 }
 
 .navbar{
@@ -36,7 +36,6 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
 }
 
 .logo{
@@ -45,21 +44,14 @@ header{
     gap:10px;
 }
 
-.logo-mark{
-    width:45px;
-    height:45px;
-    border:2px solid #d4af37;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#d4af37;
-    font-weight:bold;
-    font-size:18px;
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
 }
 
 .logo-text{
-    font-size:17px;
+    font-size:16px;
     font-weight:bold;
     letter-spacing:1px;
 }
@@ -83,41 +75,40 @@ nav a:hover{
     color:#d4af37;
 }
 
+
 /* HERO */
 
 .hero{
-    min-height:650px;
+    min-height:680px;
     display:flex;
     align-items:center;
     text-align:center;
     padding:80px 20px;
+
     background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.88)),
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
     url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1600&q=85");
+
     background-size:cover;
     background-position:center;
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
     margin:auto;
 }
 
-.badge{
-    display:inline-block;
-    border:1px solid #d4af37;
-    color:#d4af37;
-    padding:8px 16px;
-    border-radius:30px;
-    font-size:12px;
-    letter-spacing:2px;
+.hero-logo{
+    width:120px;
+    height:120px;
+    object-fit:contain;
     margin-bottom:20px;
 }
 
 .hero h1{
     font-size:52px;
-    line-height:1.1;
-    margin-bottom:20px;
+    line-height:1.15;
+    margin-bottom:18px;
 }
 
 .hero h1 span{
@@ -125,44 +116,36 @@ nav a:hover{
 }
 
 .hero p{
-    max-width:650px;
-    margin:auto;
     color:#ddd;
-    font-size:17px;
+    font-size:19px;
+    margin-bottom:30px;
 }
 
-.buttons{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.button{
+.btn{
     display:inline-block;
     padding:14px 25px;
+    margin:5px;
     border-radius:5px;
     text-decoration:none;
     font-weight:bold;
-    transition:.3s;
 }
 
-.gold{
+.btn-gold{
     background:#d4af37;
     color:#000;
 }
 
-.dark{
+.btn-dark{
     border:1px solid #d4af37;
     color:#fff;
 }
 
-.button:hover{
+.btn:hover{
     transform:translateY(-2px);
 }
 
-/* GENERAL */
+
+/* GENERAL SECTIONS */
 
 section{
     padding:75px 20px;
@@ -180,7 +163,6 @@ section{
 
 .section-title h2{
     font-size:35px;
-    margin-bottom:10px;
 }
 
 .section-title h2 span{
@@ -188,8 +170,10 @@ section{
 }
 
 .section-title p{
-    color:#aaa;
+    color:#999;
+    margin-top:8px;
 }
+
 
 /* SERVICES */
 
@@ -200,21 +184,16 @@ section{
 }
 
 .service-card{
-    background:#131313;
+    background:#111;
     border:1px solid #292929;
+    padding:28px 20px;
     border-radius:10px;
-    padding:28px 22px;
     transition:.3s;
 }
 
 .service-card:hover{
-    transform:translateY(-5px);
     border-color:#d4af37;
-}
-
-.service-icon{
-    font-size:30px;
-    margin-bottom:12px;
+    transform:translateY(-5px);
 }
 
 .service-card h3{
@@ -227,29 +206,64 @@ section{
     font-size:14px;
 }
 
+
+/* PRICES */
+
+.price-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#111;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.price-table th,
+.price-table td{
+    padding:16px;
+    border-bottom:1px solid #292929;
+    text-align:left;
+}
+
+.price-table th{
+    color:#d4af37;
+}
+
 .price{
-    margin-top:18px;
-    font-size:20px;
+    color:#d4af37;
     font-weight:bold;
 }
 
-/* GALLERY */
 
-.gallery{
+/* ABOUT */
+
+.about{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
 }
 
-.gallery img{
+.about img{
     width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
-    border:1px solid #292929;
+    border-radius:12px;
 }
 
-/* WHY US */
+.about h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.about h2 span{
+    color:#d4af37;
+}
+
+.about p{
+    color:#bbb;
+    margin-bottom:15px;
+}
+
+
+/* FEATURES */
 
 .features{
     display:grid;
@@ -260,41 +274,92 @@ section{
 .feature{
     background:#111;
     padding:25px;
-    border-left:3px solid #d4af37;
+    border-radius:10px;
+    border:1px solid #292929;
 }
 
 .feature h3{
+    color:#d4af37;
     margin-bottom:8px;
 }
 
 .feature p{
     color:#aaa;
-    font-size:14px;
 }
 
-/* BOOKING */
 
-.booking-area{
-    background:#101010;
+/* CUSTOMER REVIEWS */
+
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
-.booking-box{
-    max-width:750px;
-    margin:auto;
-    background:#151515;
+.testimonial{
+    background:#111;
     border:1px solid #292929;
     padding:30px;
     border-radius:12px;
+    transition:.3s;
+}
+
+.testimonial:hover{
+    border-color:#d4af37;
+    transform:translateY(-5px);
+}
+
+.stars{
+    color:#d4af37;
+    font-size:20px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.testimonial p{
+    color:#ccc;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.testimonial strong{
+    display:block;
+    color:#fff;
+}
+
+.testimonial span{
+    color:#888;
+    font-size:13px;
+}
+
+.review-button{
+    text-align:center;
+    margin-top:35px;
+}
+
+
+/* BOOKING */
+
+.booking{
+    background:#0d0d0d;
+}
+
+.booking-form{
+    max-width:750px;
+    margin:auto;
+    background:#111;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #292929;
 }
 
 .form-group{
-    margin-bottom:18px;
+    margin-bottom:17px;
 }
 
 .form-group label{
     display:block;
     margin-bottom:7px;
-    font-size:14px;
     color:#ddd;
 }
 
@@ -302,10 +367,10 @@ section{
 .form-group select,
 .form-group textarea{
     width:100%;
-    padding:14px;
+    padding:13px;
     background:#080808;
-    color:#fff;
     border:1px solid #333;
+    color:#fff;
     border-radius:5px;
     outline:none;
 }
@@ -323,113 +388,102 @@ section{
 
 .submit-btn{
     width:100%;
-    border:none;
     padding:15px;
     background:#d4af37;
     color:#000;
-    font-weight:bold;
+    border:none;
     border-radius:5px;
-    cursor:pointer;
+    font-weight:bold;
     font-size:16px;
 }
 
-.submit-btn:hover{
-    background:#e3c55b;
-}
 
-/* LOCATION */
+/* CONTACT */
 
-.location-box{
+.contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:25px;
-    align-items:stretch;
 }
 
-.location-info{
-    background:#131313;
+.contact-box{
+    background:#111;
     border:1px solid #292929;
     padding:30px;
     border-radius:10px;
 }
 
-.location-info h3{
+.contact-box h3{
     color:#d4af37;
-    font-size:25px;
     margin-bottom:15px;
 }
 
-.location-info p{
+.contact-box p{
     color:#bbb;
-    margin:10px 0;
+    margin:8px 0;
 }
 
-.map{
-    width:100%;
-    min-height:300px;
-    border:0;
-    border-radius:10px;
-}
 
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin:10px 0;
-    color:#bbb;
-}
-
-.contact a{
-    color:#d4af37;
-    text-decoration:none;
-}
-
-footer{
-    text-align:center;
-    background:#050505;
-    border-top:1px solid #222;
-    padding:30px 20px;
-    color:#777;
-}
-
-footer strong{
-    color:#d4af37;
-}
-
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
     right:20px;
     bottom:20px;
-    z-index:999;
-    width:58px;
-    height:58px;
-    border-radius:50%;
+    z-index:2000;
+
     background:#25D366;
     color:#fff;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-decoration:none;
-    font-size:28px;
+
+    font-size:25px;
+
     box-shadow:0 5px 20px rgba(0,0,0,.5);
 }
+
+
+/* FOOTER */
+
+footer{
+    background:#050505;
+    border-top:1px solid #222;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.footer-logo{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+footer h3{
+    color:#d4af37;
+}
+
+footer p{
+    color:#888;
+    margin:5px 0;
+}
+
 
 /* MOBILE */
 
 @media(max-width:750px){
 
-    .navbar{
-        flex-direction:column;
-    }
-
     nav{
-        flex-wrap:wrap;
-        justify-content:center;
+        display:none;
     }
 
     .hero{
@@ -441,15 +495,29 @@ footer strong{
     }
 
     .hero p{
-        font-size:15px;
+        font-size:16px;
     }
 
-    .location-box{
+    .hero-logo{
+        width:95px;
+        height:95px;
+    }
+
+    .about{
         grid-template-columns:1fr;
     }
 
-    section{
-        padding:55px 15px;
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price-table{
+        font-size:13px;
+    }
+
+    .price-table th,
+    .price-table td{
+        padding:12px 8px;
     }
 }
 </style>
@@ -457,6 +525,7 @@ footer strong{
 
 
 <body>
+
 
 <!-- HEADER -->
 
@@ -466,29 +535,33 @@ footer strong{
 
 <div class="logo">
 
-<div class="logo-mark">
-EM
-</div>
+<img
+src="esan-motors-logo.png"
+alt="ESAN MOTORS Logo">
 
 <div class="logo-text">
-ESAN <span>MICHAEL</span><br>
-AUTOMOTIVE
+ESAN <span>MOTORS</span>
 </div>
 
 </div>
+
 
 <nav>
+
 <a href="#home">Home</a>
 <a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#booking">Booking</a>
-<a href="#location">Location</a>
+<a href="#prices">Prices</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#booking">Book</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </div>
 
 </header>
+
 
 
 <!-- HERO -->
@@ -497,37 +570,39 @@ AUTOMOTIVE
 
 <div class="hero-content">
 
-<div class="badge">
-AUTOMOTIVE ENGINEERING
-</div>
+<img
+class="hero-logo"
+src="esan-motors-logo.png"
+alt="ESAN MOTORS Logo">
 
 <h1>
-Professional <span>Automotive</span><br>
-Engineering Services
+Professional <span>Automobile</span> Engineering
 </h1>
 
 <p>
-Expert vehicle diagnostics, engine electrical,
-transmission and general automobile repair services
-for reliable vehicle performance.
+Diagnose • Repair • Maintain • Keep You Moving
 </p>
 
-<div class="buttons">
+<a
+href="#booking"
+class="btn btn-gold">
 
-<a class="button gold" href="#booking">
-BOOK A SERVICE
+Book a Service
+
 </a>
 
-<a class="button dark"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20want%20to%20book%20a%20vehicle%20service.">
-WHATSAPP US
-</a>
+<a
+href="#services"
+class="btn btn-dark">
 
-</div>
+View Services
+
+</a>
 
 </div>
 
 </section>
+
 
 
 <!-- SERVICES -->
@@ -538,12 +613,10 @@ WHATSAPP US
 
 <div class="section-title">
 
-<h2>
-Our <span>Services & Prices</span>
-</h2>
+<h2>Our <span>Services</span></h2>
 
 <p>
-Professional automotive services with transparent starting prices.
+Professional automotive solutions for your vehicle.
 </p>
 
 </div>
@@ -554,136 +627,88 @@ Professional automotive services with transparent starting prices.
 
 <div class="service-card">
 
-<div class="service-icon">🔧</div>
-
-<h3>Computer Diagnostics</h3>
+<h3>Computer Diagnosis</h3>
 
 <p>
-Complete vehicle scanning, fault-code reading and system diagnosis.
+Professional vehicle scanning and electronic fault diagnosis.
 </p>
-
-<div class="price">
-From ₦10,000
-</div>
 
 </div>
 
 
 <div class="service-card">
-
-<div class="service-icon">⚡</div>
 
 <h3>Engine Electrical</h3>
 
 <p>
-Engine electrical diagnosis, wiring faults, sensors and electrical repairs.
+Electrical fault finding, sensors, wiring, ignition and starting systems.
 </p>
-
-<div class="price">
-From ₦15,000
-</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🚗</div>
-
-<h3>Engine Diagnosis</h3>
+<h3>Engine Repair</h3>
 
 <p>
-Engine performance, starting problems, misfire and fault diagnosis.
+Engine inspection, troubleshooting and mechanical repairs.
 </p>
-
-<div class="price">
-From ₦15,000
-</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">⚙️</div>
-
-<h3>Transmission Service</h3>
+<h3>Transmission</h3>
 
 <p>
-Transmission diagnosis, gear selector problems and related repairs.
+Gearbox diagnosis, selector problems, servicing and repairs.
 </p>
-
-<div class="price">
-From ₦20,000
-</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🔋</div>
-
-<h3>Starter & Alternator</h3>
+<h3>Brake System</h3>
 
 <p>
-Starting and charging system inspection, diagnosis and repair.
+Brake inspection, adjustment and replacement of faulty components.
 </p>
-
-<div class="price">
-From ₦10,000
-</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🔌</div>
-
-<h3>Vehicle Wiring</h3>
+<h3>Starting & Charging</h3>
 
 <p>
-Electrical wiring inspection, short-circuit tracing and repairs.
+Starter motor, alternator and battery charging system diagnosis.
 </p>
-
-<div class="price">
-From ₦15,000
-</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🛠️</div>
-
-<h3>Sensor Diagnosis</h3>
+<h3>Cooling System</h3>
 
 <p>
-Crankshaft, camshaft, coolant and other automotive sensor diagnosis.
+Radiator, thermostat, overheating diagnosis and cooling system repairs.
 </p>
-
-<div class="price">
-From ₦10,000
-</div>
 
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🚘</div>
-
-<h3>General Auto Repair</h3>
+<h3>General Maintenance</h3>
 
 <p>
-Professional inspection and repair of different vehicle faults.
+Routine vehicle inspection and preventive maintenance services.
 </p>
-
-<div class="price">
-From ₦15,000
-</div>
 
 </div>
 
@@ -695,38 +720,119 @@ From ₦15,000
 </section>
 
 
-<!-- GALLERY -->
 
-<section id="gallery">
+<!-- PRICES -->
+
+<section id="prices">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>
-Automotive <span>Workshop</span>
-</h2>
+<h2>Service <span>Prices</span></h2>
 
 <p>
-Professional automotive work and diagnostic environment.
+Starting prices. Final price depends on vehicle and fault.
 </p>
 
 </div>
 
 
-<div class="gallery">
+<table class="price-table">
+
+<tr>
+<th>Service</th>
+<th>Starting Price</th>
+</tr>
+
+<tr>
+<td>Computer Diagnosis / Scanning</td>
+<td class="price">₦10,000</td>
+</tr>
+
+<tr>
+<td>Engine Electrical Diagnosis</td>
+<td class="price">₦15,000</td>
+</tr>
+
+<tr>
+<td>General Vehicle Inspection</td>
+<td class="price">₦10,000</td>
+</tr>
+
+<tr>
+<td>Brake Inspection & Adjustment</td>
+<td class="price">₦10,000</td>
+</tr>
+
+<tr>
+<td>Starting / Charging Diagnosis</td>
+<td class="price">₦12,000</td>
+</tr>
+
+<tr>
+<td>Transmission Diagnosis</td>
+<td class="price">₦20,000</td>
+</tr>
+
+<tr>
+<td>Engine Fault Diagnosis</td>
+<td class="price">₦15,000</td>
+</tr>
+
+<tr>
+<td>Mobile Auto Diagnosis</td>
+<td class="price">From ₦20,000</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about">
+
+
+<div>
 
 <img
-src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=900&q=85"
-alt="Professional automotive workshop">
+src="https://images.unsplash.com/photo-1632823471565-1ecdf5c8a2d2?auto=format&fit=crop&w=1200&q=85"
+alt="Automobile workshop">
 
-<img
-src="https://images.unsplash.com/photo-1632823469850-1f77b7d1e2e6?auto=format&fit=crop&w=900&q=85"
-alt="Automotive engine">
+</div>
 
-<img
-src="https://images.unsplash.com/photo-1597007066704-67bf2068d5b2?auto=format&fit=crop&w=900&q=85"
-alt="Vehicle repair">
+
+<div>
+
+<h2>
+About <span>ESAN MOTORS</span>
+</h2>
+
+<p>
+ESAN MOTORS provides professional automobile engineering services
+focused on accurate diagnosis, quality repairs and reliable vehicle maintenance.
+</p>
+
+<p>
+Our services cover engine electrical systems, computer diagnosis,
+engine repairs, transmission, braking systems, starting and charging systems,
+cooling systems and general vehicle maintenance.
+</p>
+
+<a
+href="#booking"
+class="btn btn-gold">
+
+Book Your Vehicle
+
+</a>
 
 </div>
 
@@ -735,7 +841,8 @@ alt="Vehicle repair">
 </section>
 
 
-<!-- WHY CHOOSE US -->
+
+<!-- WHY US -->
 
 <section>
 
@@ -744,7 +851,7 @@ alt="Vehicle repair">
 <div class="section-title">
 
 <h2>
-Why <span>Choose Us</span>
+Why Choose <span>ESAN MOTORS</span>
 </h2>
 
 </div>
@@ -752,12 +859,13 @@ Why <span>Choose Us</span>
 
 <div class="features">
 
+
 <div class="feature">
 
-<h3>Professional Diagnosis</h3>
+<h3>Accurate Diagnosis</h3>
 
 <p>
-We focus on finding the actual cause of vehicle problems.
+We focus on identifying the real cause of vehicle faults.
 </p>
 
 </div>
@@ -765,10 +873,10 @@ We focus on finding the actual cause of vehicle problems.
 
 <div class="feature">
 
-<h3>Automotive Expertise</h3>
+<h3>Professional Service</h3>
 
 <p>
-Specialized knowledge in engine electrical, diagnostics and transmission.
+Every vehicle receives careful inspection and attention.
 </p>
 
 </div>
@@ -779,7 +887,7 @@ Specialized knowledge in engine electrical, diagnostics and transmission.
 <h3>Transparent Pricing</h3>
 
 <p>
-Service prices are clearly displayed before work begins.
+Service prices are clearly communicated before work begins.
 </p>
 
 </div>
@@ -787,13 +895,14 @@ Service prices are clearly displayed before work begins.
 
 <div class="feature">
 
-<h3>Customer Support</h3>
+<h3>Customer Focused</h3>
 
 <p>
-Contact us directly through WhatsApp or phone for assistance.
+Our goal is to keep your vehicle reliable and road ready.
 </p>
 
 </div>
+
 
 </div>
 
@@ -802,9 +911,124 @@ Contact us directly through WhatsApp or phone for assistance.
 </section>
 
 
+
+<!-- CUSTOMER REVIEWS -->
+
+<section id="reviews">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+What Our <span>Customers Say</span>
+</h2>
+
+<p>
+Customer experiences and feedback.
+</p>
+
+</div>
+
+
+<div class="testimonials">
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Professional service and proper vehicle diagnosis.
+The problem was clearly explained before the repair."
+</p>
+
+<strong>
+ESAN MOTORS Customer
+</strong>
+
+<span>
+Automobile Diagnosis
+</span>
+
+</div>
+
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Good attention to detail and clear communication
+throughout the repair process."
+</p>
+
+<strong>
+ESAN MOTORS Customer
+</strong>
+
+<span>
+Engine Electrical Service
+</span>
+
+</div>
+
+
+
+<div class="testimonial">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"My vehicle was inspected properly and I was kept informed
+about the problem and the repair."
+</p>
+
+<strong>
+ESAN MOTORS Customer
+</strong>
+
+<span>
+Vehicle Maintenance
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="review-button">
+
+<a
+href="https://wa.me/2349064203806?text=Hello%20ESAN%20MOTORS%2C%20I%20would%20like%20to%20leave%20a%20customer%20review."
+target="_blank"
+class="btn btn-gold">
+
+Leave a Review
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
 <!-- BOOKING -->
 
-<section class="booking-area" id="booking">
+<section
+class="booking"
+id="booking">
 
 <div class="container">
 
@@ -815,90 +1039,127 @@ Book a <span>Service</span>
 </h2>
 
 <p>
-Fill in your details and send your booking directly to WhatsApp.
+Fill the form and send your booking directly to WhatsApp.
 </p>
 
 </div>
 
 
-<div class="booking-box">
-
-<form id="bookingForm">
+<form
+class="booking-form"
+onsubmit="sendBooking(event)"
+>
 
 
 <div class="form-group">
 
-<label>Full Name</label>
+<label>
+Full Name
+</label>
 
 <input
 type="text"
 id="name"
-placeholder="Enter your full name"
+placeholder="Your name"
 required>
 
 </div>
 
 
+
 <div class="form-group">
 
-<label>Phone Number</label>
+<label>
+Phone Number
+</label>
 
 <input
 type="tel"
 id="phone"
-placeholder="Enter your phone number"
+placeholder="Your phone number"
 required>
 
 </div>
 
 
+
 <div class="form-group">
 
-<label>Vehicle</label>
+<label>
+Vehicle
+</label>
 
 <input
 type="text"
 id="vehicle"
-placeholder="e.g. Toyota Camry 2012"
+placeholder="Example: Toyota Camry 2015"
 required>
 
 </div>
 
 
+
 <div class="form-group">
 
-<label>Select Service</label>
+<label>
+Service Required
+</label>
 
-<select id="service" required>
+<select
+id="service"
+required>
 
 <option value="">
-Choose a service
+Select service
 </option>
 
-<option>Computer Diagnostics - From ₦10,000</option>
+<option>
+Computer Diagnosis
+</option>
 
-<option>Engine Electrical - From ₦15,000</option>
+<option>
+Engine Electrical
+</option>
 
-<option>Engine Diagnosis - From ₦15,000</option>
+<option>
+Engine Repair
+</option>
 
-<option>Transmission Service - From ₦20,000</option>
+<option>
+Transmission
+</option>
 
-<option>Starter & Alternator - From ₦10,000</option>
+<option>
+Brake System
+</option>
 
-<option>Vehicle Wiring - From ₦15,000</option>
+<option>
+Starting & Charging
+</option>
 
-<option>Sensor Diagnosis - From ₦10,000</option>
+<option>
+Cooling System
+</option>
 
-<option>General Auto Repair - From ₦15,000</option>
+<option>
+General Maintenance
+</option>
+
+<option>
+Mobile Auto Diagnosis
+</option>
 
 </select>
 
 </div>
 
 
+
 <div class="form-group">
 
-<label>Preferred Date</label>
+<label>
+Preferred Date
+</label>
 
 <input
 type="date"
@@ -908,106 +1169,36 @@ required>
 </div>
 
 
+
 <div class="form-group">
 
-<label>Describe the Problem</label>
+<label>
+Describe the Problem
+</label>
 
 <textarea
 id="problem"
-placeholder="Tell us what is wrong with your vehicle..."
+placeholder="Tell us what is wrong with the vehicle..."
 required></textarea>
 
 </div>
+
 
 
 <button
 class="submit-btn"
 type="submit">
 
-SEND BOOKING TO WHATSAPP
+Send Booking to WhatsApp
 
 </button>
-
 
 </form>
 
 </div>
 
-</div>
-
 </section>
 
-
-<!-- LOCATION -->
-
-<section id="location">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Our <span>Location</span>
-</h2>
-
-<p>
-Serving vehicle owners across Lagos and surrounding areas.
-</p>
-
-</div>
-
-
-<div class="location-box">
-
-
-<div class="location-info">
-
-<h3>Lagos, Nigeria</h3>
-
-<p>
-📍 <strong>Service Area:</strong><br>
-Lagos and surrounding areas
-</p>
-
-<p>
-🔧 <strong>Service:</strong><br>
-Automobile Engineering & Vehicle Diagnostics
-</p>
-
-<p>
-📞 <strong>Phone:</strong><br>
-09064203806
-</p>
-
-<p>
-📱 <strong>WhatsApp:</strong><br>
-09064203806
-</p>
-
-<a
-class="button gold"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Lagos%2C%20Nigeria">
-
-OPEN GOOGLE MAPS
-
-</a>
-
-</div>
-
-
-<iframe
-class="map"
-src="https://www.google.com/maps?q=Lagos%2C%20Nigeria&output=embed"
-loading="lazy">
-</iframe>
-
-
-</div>
-
-</div>
-
-</section>
 
 
 <!-- CONTACT -->
@@ -1019,17 +1210,24 @@ loading="lazy">
 <div class="section-title">
 
 <h2>
-Contact <span>Esan Michael Automotive</span>
+Contact <span>ESAN MOTORS</span>
 </h2>
-
-<p>
-Ready to diagnose or repair your vehicle?
-</p>
 
 </div>
 
 
-<div class="contact">
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+Contact Details
+</h3>
+
+<p>
+📍 Lagos, Nigeria
+</p>
 
 <p>
 📞 09064203806
@@ -1040,33 +1238,44 @@ Ready to diagnose or repair your vehicle?
 </p>
 
 <p>
-📧
-<a href="mailto:esanmichael131@gmail.com">
-esanmichael131@gmail.com
-</a>
+✉️ esanmichael131@gmail.com
 </p>
 
-
-<div class="buttons">
-
-<a
-class="button gold"
-href="tel:09064203806">
-
-CALL NOW
-
-</a>
-
+<br>
 
 <a
-class="button dark"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20need%20automotive%20services.">
+href="tel:09064203806"
+class="btn btn-gold">
 
-WHATSAPP
+Call Now
 
 </a>
 
 </div>
+
+
+
+<div class="contact-box">
+
+<h3>
+Find Us
+</h3>
+
+<p>
+View Lagos on Google Maps.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Lagos%2C%20Nigeria"
+target="_blank"
+class="btn btn-gold">
+
+Open Google Maps
+
+</a>
+
+</div>
+
 
 </div>
 
@@ -1075,41 +1284,56 @@ WHATSAPP
 </section>
 
 
-<!-- FOOTER -->
 
-<footer>
-
-<p>
-© 2026 <strong>Esan Michael Automotive</strong>
-</p>
-
-<p>
-Professional Automobile Engineering Services • Lagos, Nigeria
-</p>
-
-</footer>
-
-
-<!-- FLOATING WHATSAPP -->
+<!-- WHATSAPP -->
 
 <a
 class="whatsapp"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20want%20to%20book%20a%20service."
+href="https://wa.me/2349064203806"
 target="_blank"
-aria-label="WhatsApp">
+aria-label="Chat with ESAN MOTORS on WhatsApp">
 
 💬
 
 </a>
 
 
+
+<!-- FOOTER -->
+
+<footer>
+
+<img
+class="footer-logo"
+src="esan-motors-logo.png"
+alt="ESAN MOTORS Logo">
+
+<h3>
+ESAN MOTORS
+</h3>
+
+<p>
+Automobile Engineering
+</p>
+
+<p>
+Diagnose • Repair • Maintain • Keep You Moving
+</p>
+
+<p>
+© 2026 ESAN MOTORS. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
 <script>
 
-/* BOOKING TO WHATSAPP */
-
-document.getElementById("bookingForm").addEventListener("submit", function(event){
+function sendBooking(event){
 
 event.preventDefault();
+
 
 const name =
 document.getElementById("name").value;
@@ -1131,43 +1355,40 @@ document.getElementById("problem").value;
 
 
 const message =
-"🚗 NEW SERVICE BOOKING%0A%0A" +
 
-"👤 Name: " + encodeURIComponent(name) + "%0A" +
+`ESAN MOTORS - NEW BOOKING
 
-"📞 Phone: " + encodeURIComponent(phone) + "%0A" +
+Name: ${name}
 
-"🚘 Vehicle: " + encodeURIComponent(vehicle) + "%0A" +
+Phone: ${phone}
 
-"🔧 Service: " + encodeURIComponent(service) + "%0A" +
+Vehicle: ${vehicle}
 
-"📅 Preferred Date: " + encodeURIComponent(date) + "%0A" +
+Service: ${service}
 
-"📝 Problem: " + encodeURIComponent(problem) + "%0A%0A" +
+Preferred Date: ${date}
 
-"Sent from Esan Michael Automotive Website";
-
-
-const whatsappURL =
-"https://wa.me/2349064203806?text=" + message;
+Problem:
+${problem}`;
 
 
-window.open(whatsappURL, "_blank");
+const whatsappNumber =
+"2349064203806";
 
-});
+
+const url =
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+encodeURIComponent(message);
 
 
-/* PREVENT OLD DATES */
+window.open(url,"_blank");
 
-const dateInput =
-document.getElementById("date");
-
-const today =
-new Date().toISOString().split("T")[0];
-
-dateInput.min = today;
+}
 
 </script>
+
 
 </body>
 </html>
