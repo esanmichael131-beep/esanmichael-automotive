@@ -25,8 +25,8 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(5,5,5,.97);
-    border-bottom:1px solid #292929;
+    background:rgba(5,5,5,.98);
+    border-bottom:1px solid #333;
     padding:10px 18px;
 }
 
@@ -75,7 +75,6 @@ nav a:hover{
     color:#d4af37;
 }
 
-
 /* HERO */
 
 .hero{
@@ -84,11 +83,9 @@ nav a:hover{
     align-items:center;
     text-align:center;
     padding:80px 20px;
-
     background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
     url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1600&q=85");
-
     background-size:cover;
     background-position:center;
 }
@@ -99,8 +96,8 @@ nav a:hover{
 }
 
 .hero-logo{
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
     object-fit:contain;
     margin-bottom:20px;
 }
@@ -140,13 +137,6 @@ nav a:hover{
     color:#fff;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-
-/* GENERAL SECTIONS */
-
 section{
     padding:75px 20px;
 }
@@ -173,7 +163,6 @@ section{
     color:#999;
     margin-top:8px;
 }
-
 
 /* SERVICES */
 
@@ -206,7 +195,6 @@ section{
     font-size:14px;
 }
 
-
 /* PRICES */
 
 .price-table{
@@ -232,7 +220,6 @@ section{
     color:#d4af37;
     font-weight:bold;
 }
-
 
 /* ABOUT */
 
@@ -262,7 +249,6 @@ section{
     margin-bottom:15px;
 }
 
-
 /* FEATURES */
 
 .features{
@@ -287,8 +273,7 @@ section{
     color:#aaa;
 }
 
-
-/* CUSTOMER REVIEWS */
+/* REVIEWS */
 
 .testimonials{
     display:grid;
@@ -301,12 +286,6 @@ section{
     border:1px solid #292929;
     padding:30px;
     border-radius:12px;
-    transition:.3s;
-}
-
-.testimonial:hover{
-    border-color:#d4af37;
-    transform:translateY(-5px);
 }
 
 .stars{
@@ -324,7 +303,6 @@ section{
 
 .testimonial strong{
     display:block;
-    color:#fff;
 }
 
 .testimonial span{
@@ -336,7 +314,6 @@ section{
     text-align:center;
     margin-top:35px;
 }
-
 
 /* BOOKING */
 
@@ -383,7 +360,6 @@ section{
 
 .form-group textarea{
     min-height:120px;
-    resize:vertical;
 }
 
 .submit-btn{
@@ -396,7 +372,6 @@ section{
     font-weight:bold;
     font-size:16px;
 }
-
 
 /* CONTACT */
 
@@ -423,7 +398,6 @@ section{
     margin:8px 0;
 }
 
-
 /* WHATSAPP */
 
 .whatsapp{
@@ -431,26 +405,18 @@ section{
     right:20px;
     bottom:20px;
     z-index:2000;
-
     background:#25D366;
     color:#fff;
-
     width:60px;
     height:60px;
-
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-decoration:none;
-
     font-size:25px;
-
     box-shadow:0 5px 20px rgba(0,0,0,.5);
 }
-
 
 /* FOOTER */
 
@@ -462,8 +428,8 @@ footer{
 }
 
 .footer-logo{
-    width:75px;
-    height:75px;
+    width:80px;
+    height:80px;
     object-fit:contain;
     margin-bottom:10px;
 }
@@ -476,7 +442,6 @@ footer p{
     color:#888;
     margin:5px 0;
 }
-
 
 /* MOBILE */
 
@@ -499,8 +464,8 @@ footer p{
     }
 
     .hero-logo{
-        width:95px;
-        height:95px;
+        width:110px;
+        height:110px;
     }
 
     .about{
@@ -523,21 +488,16 @@ footer p{
 </style>
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 
 <header>
-
 <div class="navbar">
 
 <div class="logo">
 
-<img
-src="esan-motors-logo.png"
-alt="ESAN MOTORS Logo">
+<img src="logo.png" alt="ESAN MOTORS Logo">
 
 <div class="logo-text">
 ESAN <span>MOTORS</span>
@@ -545,9 +505,7 @@ ESAN <span>MOTORS</span>
 
 </div>
 
-
 <nav>
-
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#prices">Prices</a>
@@ -555,13 +513,10 @@ ESAN <span>MOTORS</span>
 <a href="#reviews">Reviews</a>
 <a href="#booking">Book</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </div>
-
 </header>
-
 
 
 <!-- HERO -->
@@ -572,7 +527,7 @@ ESAN <span>MOTORS</span>
 
 <img
 class="hero-logo"
-src="esan-motors-logo.png"
+src="logo.png"
 alt="ESAN MOTORS Logo">
 
 <h1>
@@ -583,26 +538,17 @@ Professional <span>Automobile</span> Engineering
 Diagnose • Repair • Maintain • Keep You Moving
 </p>
 
-<a
-href="#booking"
-class="btn btn-gold">
-
+<a href="#booking" class="btn btn-gold">
 Book a Service
-
 </a>
 
-<a
-href="#services"
-class="btn btn-dark">
-
+<a href="#services" class="btn btn-dark">
 View Services
-
 </a>
 
 </div>
 
 </section>
-
 
 
 <!-- SERVICES -->
@@ -612,113 +558,55 @@ View Services
 <div class="container">
 
 <div class="section-title">
-
 <h2>Our <span>Services</span></h2>
-
-<p>
-Professional automotive solutions for your vehicle.
-</p>
-
+<p>Professional automotive solutions for your vehicle.</p>
 </div>
-
 
 <div class="services">
 
-
 <div class="service-card">
-
 <h3>Computer Diagnosis</h3>
-
-<p>
-Professional vehicle scanning and electronic fault diagnosis.
-</p>
-
+<p>Professional vehicle scanning and electronic fault diagnosis.</p>
 </div>
 
-
 <div class="service-card">
-
 <h3>Engine Electrical</h3>
-
-<p>
-Electrical fault finding, sensors, wiring, ignition and starting systems.
-</p>
-
+<p>Electrical fault finding, sensors, wiring, ignition and starting systems.</p>
 </div>
 
-
 <div class="service-card">
-
 <h3>Engine Repair</h3>
-
-<p>
-Engine inspection, troubleshooting and mechanical repairs.
-</p>
-
+<p>Engine inspection, troubleshooting and mechanical repairs.</p>
 </div>
 
-
 <div class="service-card">
-
 <h3>Transmission</h3>
-
-<p>
-Gearbox diagnosis, selector problems, servicing and repairs.
-</p>
-
+<p>Gearbox diagnosis, selector problems, servicing and repairs.</p>
 </div>
 
-
 <div class="service-card">
-
 <h3>Brake System</h3>
-
-<p>
-Brake inspection, adjustment and replacement of faulty components.
-</p>
-
+<p>Brake inspection, adjustment and replacement of faulty components.</p>
 </div>
 
-
 <div class="service-card">
-
 <h3>Starting & Charging</h3>
-
-<p>
-Starter motor, alternator and battery charging system diagnosis.
-</p>
-
+<p>Starter motor, alternator and battery charging system diagnosis.</p>
 </div>
 
-
 <div class="service-card">
-
 <h3>Cooling System</h3>
-
-<p>
-Radiator, thermostat, overheating diagnosis and cooling system repairs.
-</p>
-
+<p>Radiator, thermostat, overheating diagnosis and cooling system repairs.</p>
 </div>
-
 
 <div class="service-card">
-
 <h3>General Maintenance</h3>
-
-<p>
-Routine vehicle inspection and preventive maintenance services.
-</p>
-
-</div>
-
-
+<p>Routine vehicle inspection and preventive maintenance services.</p>
 </div>
 
 </div>
-
+</div>
 </section>
-
 
 
 <!-- PRICES -->
@@ -728,15 +616,9 @@ Routine vehicle inspection and preventive maintenance services.
 <div class="container">
 
 <div class="section-title">
-
 <h2>Service <span>Prices</span></h2>
-
-<p>
-Starting prices. Final price depends on vehicle and fault.
-</p>
-
+<p>Starting prices. Final price depends on vehicle and fault.</p>
 </div>
-
 
 <table class="price-table">
 
@@ -786,11 +668,8 @@ Starting prices. Final price depends on vehicle and fault.
 </tr>
 
 </table>
-
 </div>
-
 </section>
-
 
 
 <!-- ABOUT -->
@@ -799,7 +678,6 @@ Starting prices. Final price depends on vehicle and fault.
 
 <div class="container about">
 
-
 <div>
 
 <img
@@ -807,7 +685,6 @@ src="https://images.unsplash.com/photo-1632823471565-1ecdf5c8a2d2?auto=format&fi
 alt="Automobile workshop">
 
 </div>
-
 
 <div>
 
@@ -826,93 +703,54 @@ engine repairs, transmission, braking systems, starting and charging systems,
 cooling systems and general vehicle maintenance.
 </p>
 
-<a
-href="#booking"
-class="btn btn-gold">
-
+<a href="#booking" class="btn btn-gold">
 Book Your Vehicle
-
 </a>
 
 </div>
 
 </div>
-
 </section>
 
 
-
-<!-- WHY US -->
+<!-- WHY CHOOSE US -->
 
 <section>
 
 <div class="container">
 
 <div class="section-title">
-
-<h2>
-Why Choose <span>ESAN MOTORS</span>
-</h2>
-
+<h2>Why Choose <span>ESAN MOTORS</span></h2>
 </div>
-
 
 <div class="features">
 
-
 <div class="feature">
-
 <h3>Accurate Diagnosis</h3>
-
-<p>
-We focus on identifying the real cause of vehicle faults.
-</p>
-
+<p>We focus on identifying the real cause of vehicle faults.</p>
 </div>
 
-
 <div class="feature">
-
 <h3>Professional Service</h3>
-
-<p>
-Every vehicle receives careful inspection and attention.
-</p>
-
+<p>Every vehicle receives careful inspection and attention.</p>
 </div>
 
-
 <div class="feature">
-
 <h3>Transparent Pricing</h3>
-
-<p>
-Service prices are clearly communicated before work begins.
-</p>
-
+<p>Service prices are clearly communicated before work begins.</p>
 </div>
-
 
 <div class="feature">
-
 <h3>Customer Focused</h3>
-
-<p>
-Our goal is to keep your vehicle reliable and road ready.
-</p>
-
-</div>
-
-
+<p>Our goal is to keep your vehicle reliable and road ready.</p>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-
-<!-- CUSTOMER REVIEWS -->
+<!-- REVIEWS -->
 
 <section id="reviews">
 
@@ -930,9 +768,7 @@ Customer experiences and feedback.
 
 </div>
 
-
 <div class="testimonials">
-
 
 <div class="testimonial">
 
@@ -945,16 +781,10 @@ Customer experiences and feedback.
 The problem was clearly explained before the repair."
 </p>
 
-<strong>
-ESAN MOTORS Customer
-</strong>
-
-<span>
-Automobile Diagnosis
-</span>
+<strong>ESAN MOTORS Customer</strong>
+<span>Automobile Diagnosis</span>
 
 </div>
-
 
 
 <div class="testimonial">
@@ -968,16 +798,10 @@ Automobile Diagnosis
 throughout the repair process."
 </p>
 
-<strong>
-ESAN MOTORS Customer
-</strong>
-
-<span>
-Engine Electrical Service
-</span>
+<strong>ESAN MOTORS Customer</strong>
+<span>Engine Electrical Service</span>
 
 </div>
-
 
 
 <div class="testimonial">
@@ -991,19 +815,12 @@ Engine Electrical Service
 about the problem and the repair."
 </p>
 
-<strong>
-ESAN MOTORS Customer
-</strong>
-
-<span>
-Vehicle Maintenance
-</span>
+<strong>ESAN MOTORS Customer</strong>
+<span>Vehicle Maintenance</span>
 
 </div>
 
-
 </div>
-
 
 <div class="review-button">
 
@@ -1019,16 +836,12 @@ Leave a Review
 </div>
 
 </div>
-
 </section>
-
 
 
 <!-- BOOKING -->
 
-<section
-class="booking"
-id="booking">
+<section class="booking" id="booking">
 
 <div class="container">
 
@@ -1044,122 +857,64 @@ Fill the form and send your booking directly to WhatsApp.
 
 </div>
 
-
-<form
-class="booking-form"
-onsubmit="sendBooking(event)"
->
-
+<form class="booking-form" onsubmit="sendBooking(event)">
 
 <div class="form-group">
-
-<label>
-Full Name
-</label>
-
+<label>Full Name</label>
 <input
 type="text"
 id="name"
 placeholder="Your name"
 required>
-
 </div>
 
 
-
 <div class="form-group">
-
-<label>
-Phone Number
-</label>
-
+<label>Phone Number</label>
 <input
 type="tel"
 id="phone"
 placeholder="Your phone number"
 required>
-
 </div>
 
 
-
 <div class="form-group">
-
-<label>
-Vehicle
-</label>
-
+<label>Vehicle</label>
 <input
 type="text"
 id="vehicle"
 placeholder="Example: Toyota Camry 2015"
 required>
-
 </div>
 
 
-
 <div class="form-group">
+<label>Service Required</label>
 
-<label>
-Service Required
-</label>
-
-<select
-id="service"
-required>
+<select id="service" required>
 
 <option value="">
 Select service
 </option>
 
-<option>
-Computer Diagnosis
-</option>
-
-<option>
-Engine Electrical
-</option>
-
-<option>
-Engine Repair
-</option>
-
-<option>
-Transmission
-</option>
-
-<option>
-Brake System
-</option>
-
-<option>
-Starting & Charging
-</option>
-
-<option>
-Cooling System
-</option>
-
-<option>
-General Maintenance
-</option>
-
-<option>
-Mobile Auto Diagnosis
-</option>
+<option>Computer Diagnosis</option>
+<option>Engine Electrical</option>
+<option>Engine Repair</option>
+<option>Transmission</option>
+<option>Brake System</option>
+<option>Starting & Charging</option>
+<option>Cooling System</option>
+<option>General Maintenance</option>
+<option>Mobile Auto Diagnosis</option>
 
 </select>
-
 </div>
-
 
 
 <div class="form-group">
 
-<label>
-Preferred Date
-</label>
+<label>Preferred Date</label>
 
 <input
 type="date"
@@ -1169,12 +924,9 @@ required>
 </div>
 
 
-
 <div class="form-group">
 
-<label>
-Describe the Problem
-</label>
+<label>Describe the Problem</label>
 
 <textarea
 id="problem"
@@ -1182,7 +934,6 @@ placeholder="Tell us what is wrong with the vehicle..."
 required></textarea>
 
 </div>
-
 
 
 <button
@@ -1194,11 +945,8 @@ Send Booking to WhatsApp
 </button>
 
 </form>
-
 </div>
-
 </section>
-
 
 
 <!-- CONTACT -->
@@ -1218,28 +966,14 @@ Contact <span>ESAN MOTORS</span>
 
 <div class="contact-grid">
 
-
 <div class="contact-box">
 
-<h3>
-Contact Details
-</h3>
+<h3>Contact Details</h3>
 
-<p>
-📍 Lagos, Nigeria
-</p>
-
-<p>
-📞 09064203806
-</p>
-
-<p>
-📞 09064203896
-</p>
-
-<p>
-✉️ esanmichael131@gmail.com
-</p>
+<p>📍 Lagos, Nigeria</p>
+<p>📞 09064203806</p>
+<p>📞 09064203896</p>
+<p>✉️ esanmichael131@gmail.com</p>
 
 <br>
 
@@ -1254,12 +988,9 @@ Call Now
 </div>
 
 
-
 <div class="contact-box">
 
-<h3>
-Find Us
-</h3>
+<h3>Find Us</h3>
 
 <p>
 View Lagos on Google Maps.
@@ -1276,13 +1007,9 @@ Open Google Maps
 
 </div>
 
-
 </div>
-
 </div>
-
 </section>
-
 
 
 <!-- WHATSAPP -->
@@ -1298,23 +1025,18 @@ aria-label="Chat with ESAN MOTORS on WhatsApp">
 </a>
 
 
-
 <!-- FOOTER -->
 
 <footer>
 
 <img
 class="footer-logo"
-src="esan-motors-logo.png"
+src="logo.png"
 alt="ESAN MOTORS Logo">
 
-<h3>
-ESAN MOTORS
-</h3>
+<h3>ESAN MOTORS</h3>
 
-<p>
-Automobile Engineering
-</p>
+<p>Automobile Engineering</p>
 
 <p>
 Diagnose • Repair • Maintain • Keep You Moving
@@ -1327,13 +1049,11 @@ Diagnose • Repair • Maintain • Keep You Moving
 </footer>
 
 
-
 <script>
 
 function sendBooking(event){
 
 event.preventDefault();
-
 
 const name =
 document.getElementById("name").value;
@@ -1353,9 +1073,7 @@ document.getElementById("date").value;
 const problem =
 document.getElementById("problem").value;
 
-
 const message =
-
 `ESAN MOTORS - NEW BOOKING
 
 Name: ${name}
@@ -1371,10 +1089,8 @@ Preferred Date: ${date}
 Problem:
 ${problem}`;
 
-
 const whatsappNumber =
 "2349064203806";
-
 
 const url =
 "https://wa.me/" +
@@ -1382,13 +1098,11 @@ whatsappNumber +
 "?text=" +
 encodeURIComponent(message);
 
-
 window.open(url,"_blank");
 
 }
 
 </script>
-
 
 </body>
 </html>
