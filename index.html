@@ -8,8 +8,6 @@
 
 <meta name="description" content="Esan Michael Automotive - Professional automotive diagnostics, engine electrical, car electrical, fault diagnosis, starting and charging services in Lagos, Nigeria.">
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <style>
 *{
   box-sizing:border-box;
@@ -33,119 +31,128 @@ a{
   color:inherit;
 }
 
-img{
-  max-width:100%;
-  display:block;
+.container{
+  width:92%;
+  max-width:1150px;
+  margin:auto;
 }
 
+/* HEADER */
+
 header{
+  background:#050505;
+  border-bottom:1px solid #222;
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(0,0,0,.96);
-  border-bottom:1px solid #222;
-  padding:12px 20px;
 }
 
 .nav{
-  max-width:1200px;
-  margin:auto;
+  min-height:75px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
 }
 
-.brand{
+.logo-area{
   display:flex;
   align-items:center;
   gap:12px;
 }
 
-.brand img{
+.logo{
   width:55px;
   height:55px;
   object-fit:contain;
-  border-radius:50%;
-  background:#fff;
+  border-radius:8px;
 }
 
-.brand-text h2{
-  font-size:17px;
-  letter-spacing:1px;
+.logo-text{
+  font-size:18px;
+  font-weight:bold;
+  letter-spacing:.5px;
 }
 
-.brand-text p{
+.logo-text span{
+  display:block;
   font-size:11px;
   color:#aaa;
-  letter-spacing:1px;
+  font-weight:normal;
 }
 
 nav{
   display:flex;
-  gap:18px;
+  gap:20px;
 }
 
 nav a{
   color:#ddd;
   font-size:14px;
-  font-weight:bold;
 }
 
 nav a:hover{
-  color:#f5b400;
+  color:#fff;
 }
+
+@media(max-width:700px){
+  nav{
+    display:none;
+  }
+
+  .logo-text{
+    font-size:15px;
+  }
+}
+
+/* HERO */
 
 .hero{
   min-height:650px;
   display:flex;
   align-items:center;
   background:
-  linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
-  url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=90");
-  background-size:cover;
-  background-position:center;
+    linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=85")
+    center/cover no-repeat;
 }
 
 .hero-content{
-  width:100%;
-  max-width:1200px;
-  margin:auto;
-  padding:80px 20px;
+  max-width:750px;
+  padding:80px 0;
 }
 
-.hero-logo{
-  width:120px;
-  height:120px;
-  object-fit:contain;
-  margin-bottom:25px;
-  background:#fff;
-  border-radius:50%;
-  padding:5px;
+.badge{
+  display:inline-block;
+  border:1px solid #555;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  margin-bottom:20px;
+  color:#ddd;
 }
 
 .hero h1{
-  font-size:clamp(38px,7vw,76px);
+  font-size:clamp(40px,8vw,75px);
   line-height:1.05;
-  max-width:800px;
   margin-bottom:20px;
 }
 
 .hero h1 span{
-  color:#f5b400;
+  color:#ccc;
 }
 
 .hero p{
-  max-width:650px;
   color:#ddd;
   font-size:18px;
+  max-width:650px;
   margin-bottom:30px;
 }
 
 .buttons{
   display:flex;
-  gap:12px;
   flex-wrap:wrap;
+  gap:12px;
 }
 
 .btn{
@@ -153,36 +160,23 @@ nav a:hover{
   padding:14px 22px;
   border-radius:6px;
   font-weight:bold;
-  border:1px solid #f5b400;
-  transition:.3s;
+  border:1px solid #fff;
 }
 
-.btn-primary{
-  background:#f5b400;
+.btn-main{
+  background:#fff;
   color:#000;
 }
 
-.btn-primary:hover{
-  background:#fff;
-  border-color:#fff;
-}
-
-.btn-outline{
+.btn-dark{
+  background:#111;
   color:#fff;
 }
 
-.btn-outline:hover{
-  background:#fff;
-  color:#000;
-}
+/* SECTIONS */
 
 section{
-  padding:80px 20px;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
+  padding:80px 0;
 }
 
 .section-title{
@@ -191,10 +185,9 @@ section{
 }
 
 .section-title small{
-  color:#f5b400;
+  color:#aaa;
   text-transform:uppercase;
-  letter-spacing:3px;
-  font-weight:bold;
+  letter-spacing:2px;
 }
 
 .section-title h2{
@@ -208,6 +201,8 @@ section{
   margin:10px auto 0;
 }
 
+/* ABOUT */
+
 .about{
   background:#101010;
 }
@@ -215,22 +210,19 @@ section{
 .about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:50px;
+  gap:45px;
   align-items:center;
 }
 
 .about-image{
-  min-height:420px;
-  border-radius:12px;
-  background:
-  linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)),
-  url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=85");
-  background-size:cover;
-  background-position:center;
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  border-radius:10px;
 }
 
-.about-text h2{
-  font-size:36px;
+.about-text h3{
+  font-size:32px;
   margin-bottom:18px;
 }
 
@@ -239,28 +231,38 @@ section{
   margin-bottom:18px;
 }
 
-.about-list{
-  list-style:none;
-  margin-top:20px;
+.points{
+  display:grid;
+  gap:12px;
 }
 
-.about-list li{
-  margin-bottom:12px;
-  color:#ddd;
+.point{
+  border-left:3px solid #fff;
+  padding-left:15px;
 }
 
-.about-list li::before{
-  content:"✓";
-  color:#f5b400;
-  font-weight:bold;
-  margin-right:10px;
+.point strong{
+  display:block;
 }
+
+.point span{
+  color:#aaa;
+  font-size:14px;
+}
+
+@media(max-width:800px){
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* SERVICES */
 
 .services{
   background:#080808;
 }
 
-.services-grid{
+.service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
@@ -268,39 +270,52 @@ section{
 
 .service-card{
   background:#121212;
-  border:1px solid #242424;
+  border:1px solid #252525;
   padding:28px;
   border-radius:10px;
-  transition:.3s;
+  transition:.2s;
 }
 
 .service-card:hover{
-  transform:translateY(-5px);
-  border-color:#f5b400;
+  transform:translateY(-4px);
+  border-color:#555;
 }
 
-.service-icon{
-  font-size:34px;
-  margin-bottom:15px;
+.service-number{
+  font-size:13px;
+  color:#777;
+  margin-bottom:20px;
 }
 
 .service-card h3{
-  font-size:20px;
+  font-size:21px;
   margin-bottom:10px;
 }
 
 .service-card p{
   color:#aaa;
   font-size:14px;
-  min-height:65px;
+  margin-bottom:20px;
 }
 
 .price{
-  color:#f5b400;
-  font-size:20px;
   font-weight:bold;
-  margin-top:18px;
+  font-size:18px;
 }
+
+@media(max-width:850px){
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* WHY US */
 
 .why{
   background:#101010;
@@ -308,34 +323,146 @@ section{
 
 .why-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .why-card{
-  text-align:center;
-  padding:30px 18px;
+  padding:30px;
   background:#151515;
   border-radius:10px;
-  border:1px solid #242424;
-}
-
-.why-card .number{
-  font-size:35px;
-  margin-bottom:12px;
 }
 
 .why-card h3{
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
 .why-card p{
-  color:#999;
-  font-size:14px;
+  color:#aaa;
 }
 
-.testimonials{
+@media(max-width:700px){
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* BOOKING */
+
+.booking{
+  background:#0b0b0b;
+}
+
+.booking-box{
+  max-width:850px;
+  margin:auto;
+  background:#121212;
+  padding:35px;
+  border:1px solid #292929;
+  border-radius:12px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  margin-bottom:7px;
+  font-size:14px;
+  color:#ddd;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:14px;
   background:#080808;
+  border:1px solid #333;
+  border-radius:6px;
+  color:#fff;
+  outline:none;
+  font-size:15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#aaa;
+}
+
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.submit-btn{
+  width:100%;
+  padding:16px;
+  background:#fff;
+  color:#000;
+  border:0;
+  border-radius:6px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.submit-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+#bookingStatus{
+  margin-top:18px;
+  padding:12px;
+  border-radius:6px;
+  display:none;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.success{
+  display:block !important;
+  background:#123b20;
+  color:#baf5c8;
+}
+
+.error{
+  display:block !important;
+  background:#3d1515;
+  color:#ffbcbc;
+}
+
+@media(max-width:650px){
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .booking-box{
+    padding:22px;
+  }
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+  background:#101010;
 }
 
 .testimonial-grid{
@@ -345,960 +472,700 @@ section{
 }
 
 .testimonial{
-  background:#121212;
-  border:1px solid #242424;
+  background:#151515;
+  border:1px solid #252525;
+  padding:25px;
   border-radius:10px;
-  padding:28px;
 }
 
 .stars{
-  color:#f5b400;
-  font-size:20px;
   margin-bottom:15px;
+  letter-spacing:2px;
 }
 
 .testimonial p{
-  color:#ccc;
+  color:#bbb;
   font-style:italic;
-  margin-bottom:20px;
 }
 
-.pricing{
-  background:#101010;
-}
-
-.price-table{
-  max-width:900px;
-  margin:auto;
-  border:1px solid #292929;
-  border-radius:10px;
-  overflow:hidden;
-}
-
-.price-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding:18px 22px;
-  border-bottom:1px solid #292929;
-  background:#121212;
-}
-
-.price-row:last-child{
-  border-bottom:none;
-}
-
-.price-row span:first-child{
-  color:#ddd;
-}
-
-.price-row span:last-child{
-  color:#f5b400;
-  font-weight:bold;
-  white-space:nowrap;
-}
-
-.booking{
-  background:#080808;
-}
-
-.booking-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
-  align-items:start;
-}
-
-.booking-info{
-  background:#121212;
-  padding:30px;
-  border-radius:10px;
-  border:1px solid #242424;
-}
-
-.booking-info h3{
-  font-size:28px;
-  margin-bottom:15px;
-}
-
-.booking-info p{
-  color:#aaa;
-  margin-bottom:20px;
-}
-
-.contact-item{
-  margin-bottom:15px;
-  color:#ddd;
-}
-
-.contact-item strong{
-  color:#f5b400;
+.testimonial strong{
   display:block;
-  margin-bottom:3px;
-}
-
-form{
-  background:#121212;
-  padding:30px;
-  border-radius:10px;
-  border:1px solid #242424;
-}
-
-form h3{
-  font-size:28px;
-  margin-bottom:20px;
-}
-
-.form-group{
-  margin-bottom:15px;
-}
-
-.form-group label{
-  display:block;
-  margin-bottom:7px;
-  color:#ddd;
-  font-size:14px;
-}
-
-input,
-select,
-textarea{
-  width:100%;
-  padding:14px;
-  border-radius:6px;
-  border:1px solid #333;
-  background:#080808;
-  color:#fff;
-  font-size:15px;
-  outline:none;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-  border-color:#f5b400;
-}
-
-textarea{
-  min-height:120px;
-  resize:vertical;
-}
-
-.submit-btn{
-  width:100%;
-  border:none;
-  cursor:pointer;
-  padding:15px;
-  background:#f5b400;
-  color:#000;
-  font-weight:bold;
-  font-size:16px;
-  border-radius:6px;
-}
-
-.submit-btn:disabled{
-  opacity:.6;
-  cursor:not-allowed;
-}
-
-#bookingStatus{
   margin-top:15px;
-  padding:12px;
-  border-radius:6px;
-  display:none;
-  font-size:14px;
-  text-align:center;
 }
 
-.success{
-  display:block!important;
-  background:#123d20;
-  color:#6dff99;
-  border:1px solid #247a3d;
+@media(max-width:750px){
+  .testimonial-grid{
+    grid-template-columns:1fr;
+  }
 }
 
-.error{
-  display:block!important;
-  background:#401515;
-  color:#ff8b8b;
-  border:1px solid #8a2929;
-}
+/* LOCATION */
 
 .location{
-  background:#101010;
+  background:#080808;
 }
 
-.location-grid{
+.location-box{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:30px;
+  gap:25px;
 }
 
-.location-info{
+.contact-card{
+  background:#121212;
+  border:1px solid #252525;
   padding:30px;
-  background:#151515;
   border-radius:10px;
-  border:1px solid #242424;
 }
 
-.location-info h3{
-  font-size:28px;
+.contact-card h3{
   margin-bottom:15px;
 }
 
-.location-info p{
+.contact-card p{
   color:#aaa;
   margin-bottom:15px;
+}
+
+.contact-link{
+  display:block;
+  margin:12px 0;
+  color:#fff;
 }
 
 .map{
   width:100%;
-  height:400px;
+  min-height:350px;
   border:0;
   border-radius:10px;
 }
 
+@media(max-width:750px){
+  .location-box{
+    grid-template-columns:1fr;
+  }
+}
+
+/* CTA */
+
 .cta{
-  padding:70px 20px;
+  background:#151515;
   text-align:center;
-  background:
-  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-  url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=85");
-  background-size:cover;
-  background-position:center;
 }
 
 .cta h2{
-  font-size:42px;
+  font-size:40px;
   margin-bottom:15px;
 }
 
 .cta p{
-  color:#ccc;
-  max-width:650px;
-  margin:0 auto 25px;
+  color:#aaa;
+  margin-bottom:25px;
 }
+
+/* FOOTER */
 
 footer{
   background:#050505;
   border-top:1px solid #222;
-  padding:35px 20px;
+  padding:35px 0;
   text-align:center;
 }
 
-footer img{
-  width:70px;
-  height:70px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:50%;
-  margin:0 auto 15px;
-}
-
 footer p{
-  color:#777;
-  font-size:13px;
+  color:#888;
+  font-size:14px;
 }
 
 .footer-links{
   margin-top:15px;
   display:flex;
   justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
+  gap:20px;
 }
 
 .footer-links a{
-  color:#f5b400;
-  font-size:14px;
+  color:#ccc;
 }
+
+/* WHATSAPP FLOAT */
 
 .whatsapp{
   position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:2000;
-  background:#25D366;
-  color:#fff;
+  right:20px;
+  bottom:20px;
   width:58px;
   height:58px;
   border-radius:50%;
+  background:#25D366;
+  color:#fff;
   display:flex;
-  align-items:center;
   justify-content:center;
-  font-size:28px;
-  box-shadow:0 5px 20px rgba(0,0,0,.5);
-}
-
-@media(max-width:900px){
-
-  nav{
-    display:none;
-  }
-
-  .services-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .testimonial-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-grid,
-  .booking-grid,
-  .location-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
-
-  header{
-    padding:10px 14px;
-  }
-
-  .brand img{
-    width:45px;
-    height:45px;
-  }
-
-  .brand-text h2{
-    font-size:14px;
-  }
-
-  .hero{
-    min-height:600px;
-  }
-
-  .hero-content{
-    padding:60px 18px;
-  }
-
-  .hero-logo{
-    width:90px;
-    height:90px;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  section{
-    padding:60px 16px;
-  }
-
-  .section-title h2{
-    font-size:30px;
-  }
-
-  .services-grid,
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-image{
-    min-height:300px;
-  }
-
-  .price-row{
-    padding:16px;
-    font-size:14px;
-  }
-
-  .cta h2{
-    font-size:32px;
-  }
-
-  form,
-  .booking-info,
-  .location-info{
-    padding:22px;
-  }
+  align-items:center;
+  font-size:25px;
+  font-weight:bold;
+  z-index:2000;
+  box-shadow:0 4px 15px rgba(0,0,0,.5);
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-<div class="nav">
+  <div class="container nav">
 
-<a href="#home" class="brand">
-<img src="logo.png" alt="Esan Michael Automotive Logo">
+    <a href="#home" class="logo-area">
+      <img src="logo.png" class="logo" alt="Esan Michael Automotive Logo">
 
-<div class="brand-text">
-<h2>ESAN MICHAEL</h2>
-<p>AUTOMOTIVE</p>
-</div>
-</a>
+      <div class="logo-text">
+        ESAN MICHAEL AUTOMOTIVE
+        <span>Automotive Diagnostics & Electrical</span>
+      </div>
+    </a>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#pricing">Prices</a>
-<a href="#booking">Booking</a>
-<a href="#location">Location</a>
-</nav>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-</div>
+  </div>
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero" id="home">
+  <div class="container">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<img src="logo.png" alt="Esan Michael Automotive Logo" class="hero-logo">
+      <div class="badge">LAGOS • NIGERIA</div>
 
-<h1>
-PROFESSIONAL<br>
-<span>AUTOMOTIVE</span><br>
-SERVICES
-</h1>
+      <h1>
+        Professional<br>
+        <span>Automotive Solutions.</span>
+      </h1>
 
-<p>
-Professional vehicle diagnostics, engine electrical,
-car electrical, fault diagnosis, starting and charging
-services in Lagos, Nigeria.
-</p>
+      <p>
+        Professional automotive diagnostics, engine electrical,
+        car electrical, fault diagnosis, starting and charging services.
+      </p>
 
-<div class="buttons">
+      <div class="buttons">
+        <a href="#booking" class="btn btn-main">
+          Book a Service
+        </a>
 
-<a class="btn btn-primary"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20want%20to%20book%20a%20vehicle%20service."
-target="_blank">
-Book on WhatsApp
-</a>
+        <a href="https://wa.me/2349064203806" class="btn btn-dark">
+          WhatsApp Us
+        </a>
+      </div>
 
-<a class="btn btn-outline" href="tel:+2349064203806">
-Call Now
-</a>
+    </div>
 
-<a class="btn btn-outline" href="#services">
-View Services
-</a>
-
-</div>
-</div>
+  </div>
 </section>
 
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-title">
-<small>About Us</small>
-<h2>Reliable Automotive Solutions</h2>
+    <div class="section-title">
+      <small>About Us</small>
+      <h2>Reliable Automotive Service</h2>
+    </div>
 
-<p>
-Quality vehicle electrical and diagnostic services
-focused on finding the real cause of vehicle problems.
-</p>
-</div>
+    <div class="about-grid">
 
-<div class="about-grid">
+      <img
+        class="about-image"
+        src="https://images.unsplash.com/photo-1632823471565-1ecdf5c22b19?auto=format&fit=crop&w=1200&q=85"
+        alt="Automotive mechanic working on a vehicle"
+      >
 
-<div class="about-image"></div>
+      <div class="about-text">
 
-<div class="about-text">
+        <h3>We Find The Problem.</h3>
 
-<h2>Esan Michael Automotive</h2>
+        <p>
+          Esan Michael Automotive provides professional automotive
+          diagnostics and electrical services for vehicle owners in Lagos.
+        </p>
 
-<p>
-We provide professional automotive services for
-vehicle owners who want proper diagnosis and reliable
-solutions to vehicle problems.
-</p>
+        <p>
+          Our focus is proper fault finding, electrical diagnosis,
+          starting and charging systems and reliable vehicle inspection.
+        </p>
 
-<p>
-Our services cover engine electrical systems,
-computer diagnostics, car electrical faults,
-starting and charging systems and general vehicle
-fault diagnosis.
-</p>
+        <div class="points">
 
-<ul class="about-list">
-<li>Professional vehicle diagnostics</li>
-<li>Engine electrical fault diagnosis</li>
-<li>Car electrical repairs</li>
-<li>Starting and charging system checks</li>
-<li>Vehicle inspection</li>
-<li>Customer-focused service</li>
-</ul>
+          <div class="point">
+            <strong>Professional Diagnosis</strong>
+            <span>We identify vehicle faults before repairs.</span>
+          </div>
 
-</div>
-</div>
-</div>
+          <div class="point">
+            <strong>Automotive Electrical</strong>
+            <span>Engine and vehicle electrical fault diagnosis.</span>
+          </div>
+
+          <div class="point">
+            <strong>Customer Focus</strong>
+            <span>Clear communication and professional service.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
+
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-title">
-<small>Our Services</small>
-<h2>Automotive Services</h2>
+    <div class="section-title">
+      <small>Our Services</small>
+      <h2>What We Do</h2>
+      <p>
+        Professional services for diagnosis, electrical systems
+        and vehicle problems.
+      </p>
+    </div>
 
-<p>
-Professional services for common vehicle electrical,
-engine and diagnostic problems.
-</p>
-</div>
+    <div class="service-grid">
 
-<div class="services-grid">
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>Computer Diagnostics</h3>
+        <p>
+          Vehicle scanner diagnosis and electronic fault checking.
+        </p>
+        <div class="price">From ₦10,000</div>
+      </div>
 
-<div class="service-card">
-<div class="service-icon">🔧</div>
-<h3>Computer Diagnostics</h3>
-<p>Vehicle computer scanning and fault-code diagnosis to help identify electronic and engine problems.</p>
-<div class="price">From ₦10,000</div>
-</div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>Engine Electrical</h3>
+        <p>
+          Diagnosis of engine electrical and control system faults.
+        </p>
+        <div class="price">From ₦15,000</div>
+      </div>
 
-<div class="service-card">
-<div class="service-icon">⚡</div>
-<h3>Engine Electrical</h3>
-<p>Diagnosis of engine electrical faults including sensors, ignition, wiring and control systems.</p>
-<div class="price">From ₦15,000</div>
-</div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>Car Electrical</h3>
+        <p>
+          Electrical troubleshooting for vehicle electrical systems.
+        </p>
+        <div class="price">From ₦10,000</div>
+      </div>
 
-<div class="service-card">
-<div class="service-icon">🔌</div>
-<h3>Car Electrical</h3>
-<p>Electrical fault diagnosis covering vehicle wiring, lights, power supply and electrical components.</p>
-<div class="price">From ₦10,000</div>
-</div>
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <h3>Engine Fault Diagnosis</h3>
+        <p>
+          Investigation of engine faults, warning lights and running problems.
+        </p>
+        <div class="price">From ₦15,000</div>
+      </div>
 
-<div class="service-card">
-<div class="service-icon">🚘</div>
-<h3>Engine Fault Diagnosis</h3>
-<p>Professional checks for engine running problems, misfires, starting problems and warning lights.</p>
-<div class="price">From ₦15,000</div>
-</div>
+      <div class="service-card">
+        <div class="service-number">05</div>
+        <h3>Starting & Charging</h3>
+        <p>
+          Diagnosis of starter, alternator and charging system problems.
+        </p>
+        <div class="price">From ₦10,000</div>
+      </div>
 
-<div class="service-card">
-<div class="service-icon">🔋</div>
-<h3>Starting & Charging</h3>
-<p>Diagnosis of starter, battery, alternator and charging-system problems.</p>
-<div class="price">From ₦10,000</div>
-</div>
+      <div class="service-card">
+        <div class="service-number">06</div>
+        <h3>Vehicle Inspection</h3>
+        <p>
+          General vehicle inspection before purchase or repair.
+        </p>
+        <div class="price">From ₦10,000</div>
+      </div>
 
-<div class="service-card">
-<div class="service-icon">🔍</div>
-<h3>Vehicle Inspection</h3>
-<p>General vehicle inspection to identify visible electrical, engine and mechanical concerns.</p>
-<div class="price">From ₦10,000</div>
-</div>
+    </div>
 
-</div>
-</div>
+  </div>
+
 </section>
 
+
+<!-- WHY US -->
 
 <section class="why">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-title">
-<small>Why Choose Us</small>
-<h2>Built Around Proper Diagnosis</h2>
-</div>
+    <div class="section-title">
+      <small>Why Choose Us</small>
+      <h2>Built Around Proper Diagnosis</h2>
+    </div>
 
-<div class="why-grid">
+    <div class="why-grid">
 
-<div class="why-card">
-<div class="number">🔎</div>
-<h3>Proper Diagnosis</h3>
-<p>We focus on identifying the cause of the problem.</p>
-</div>
+      <div class="why-card">
+        <h3>Fault Finding</h3>
+        <p>
+          We focus on finding the actual cause of vehicle problems.
+        </p>
+      </div>
 
-<div class="why-card">
-<div class="number">⚙️</div>
-<h3>Professional Service</h3>
-<p>Automotive electrical and diagnostic service.</p>
-</div>
+      <div class="why-card">
+        <h3>Electrical Expertise</h3>
+        <p>
+          We work on engine electrical and vehicle electrical systems.
+        </p>
+      </div>
 
-<div class="why-card">
-<div class="number">📱</div>
-<h3>Easy Booking</h3>
-<p>Contact us directly through WhatsApp or phone.</p>
-</div>
+      <div class="why-card">
+        <h3>Professional Service</h3>
+        <p>
+          Customers can contact us directly and book a service online.
+        </p>
+      </div>
 
-<div class="why-card">
-<div class="number">📍</div>
-<h3>Lagos Based</h3>
-<p>Serving vehicle owners in Lagos and surrounding areas.</p>
-</div>
+    </div>
 
-</div>
-</div>
+  </div>
+
 </section>
 
 
-<section class="testimonials">
-
-<div class="container">
-
-<div class="section-title">
-<small>Customer Experience</small>
-<h2>What Customers Say</h2>
-</div>
-
-<div class="testimonial-grid">
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"Professional approach and good attention to the vehicle problem."</p>
-<strong>— Customer</strong>
-</div>
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"The diagnosis helped identify the electrical issue with my vehicle."</p>
-<strong>— Customer</strong>
-</div>
-
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"Easy to contact and the service was handled professionally."</p>
-<strong>— Customer</strong>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="pricing" id="pricing">
-
-<div class="container">
-
-<div class="section-title">
-<small>Service Prices</small>
-<h2>Professional Starting Prices</h2>
-<p>Final price may depend on the vehicle and the nature of the fault.</p>
-</div>
-
-<div class="price-table">
-
-<div class="price-row">
-<span>Computer Diagnostics</span>
-<span>₦10,000+</span>
-</div>
-
-<div class="price-row">
-<span>Engine Electrical</span>
-<span>₦15,000+</span>
-</div>
-
-<div class="price-row">
-<span>Car Electrical</span>
-<span>₦10,000+</span>
-</div>
-
-<div class="price-row">
-<span>Engine Fault Diagnosis</span>
-<span>₦15,000+</span>
-</div>
-
-<div class="price-row">
-<span>Starting & Charging System</span>
-<span>₦10,000+</span>
-</div>
-
-<div class="price-row">
-<span>Vehicle Inspection</span>
-<span>₦10,000+</span>
-</div>
-
-</div>
-</div>
-</section>
-
+<!-- BOOKING -->
 
 <section class="booking" id="booking">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-title">
+    <div class="section-title">
+      <small>Online Booking</small>
+      <h2>Book Your Vehicle Service</h2>
+      <p>
+        Fill in your details and tell us what is wrong with your vehicle.
+      </p>
+    </div>
 
-<small>Book A Service</small>
+    <div class="booking-box">
 
-<h2>Contact Esan Michael Automotive</h2>
+      <form id="bookingForm">
 
-<p>
-Submit your details and your booking will be saved
-and sent to WhatsApp.
-</p>
+        <div class="form-grid">
 
-</div>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name"
+              required
+            >
+          </div>
 
-<div class="booking-grid">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="08012345678"
+              required
+            >
+          </div>
 
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="your@email.com"
+            >
+          </div>
 
-<div class="booking-info">
+          <div class="form-group">
+            <label for="car">Vehicle *</label>
+            <input
+              type="text"
+              id="car"
+              placeholder="Example: Toyota Camry 2012"
+              required
+            >
+          </div>
 
-<h3>Let's Fix Your Vehicle</h3>
+          <div class="form-group">
+            <label for="service">Service *</label>
 
-<p>
-Tell us what is wrong with your vehicle and submit
-your booking. Your details will be saved in our
-booking system.
-</p>
+            <select id="service" required>
+              <option value="">Select a service</option>
+              <option value="Computer Diagnostics">
+                Computer Diagnostics - From ₦10,000
+              </option>
+              <option value="Engine Electrical">
+                Engine Electrical - From ₦15,000
+              </option>
+              <option value="Car Electrical">
+                Car Electrical - From ₦10,000
+              </option>
+              <option value="Engine Fault Diagnosis">
+                Engine Fault Diagnosis - From ₦15,000
+              </option>
+              <option value="Starting & Charging">
+                Starting & Charging - From ₦10,000
+              </option>
+              <option value="Vehicle Inspection">
+                Vehicle Inspection - From ₦10,000
+              </option>
+            </select>
+          </div>
 
-<div class="contact-item">
-<strong>WhatsApp / Phone</strong>
-09064203806
-</div>
+          <div class="form-group">
+            <label for="date">Preferred Date *</label>
+            <input
+              type="date"
+              id="date"
+              required
+            >
+          </div>
 
-<div class="contact-item">
-<strong>Location</strong>
-Lagos, Nigeria
-</div>
+          <div class="form-group">
+            <label for="time">Preferred Time *</label>
+            <input
+              type="time"
+              id="time"
+              required
+            >
+          </div>
 
-<div class="contact-item">
-<strong>Services</strong>
-Diagnostics • Engine Electrical • Car Electrical • Fault Diagnosis • Starting & Charging
-</div>
+          <div class="form-group full">
+            <label for="message">What is wrong with the vehicle? *</label>
 
-<a class="btn btn-primary"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20want%20to%20book%20a%20service."
-target="_blank">
-Chat on WhatsApp
-</a>
+            <textarea
+              id="message"
+              placeholder="Describe the problem with your vehicle..."
+              required
+            ></textarea>
+          </div>
 
-</div>
+          <div class="form-group full">
 
+            <button
+              type="submit"
+              class="submit-btn"
+              id="submitBtn"
+            >
+              SAVE BOOKING & SEND TO WHATSAPP
+            </button>
 
-<form id="bookingForm">
+            <div id="bookingStatus"></div>
 
-<h3>Service Booking</h3>
+          </div>
 
-<div class="form-group">
-<label for="name">Your Name</label>
-<input type="text" id="name" placeholder="Enter your name" required>
-</div>
+        </div>
 
-<div class="form-group">
-<label for="phone">Phone Number</label>
-<input type="tel" id="phone" placeholder="Enter your phone number" required>
-</div>
+      </form>
 
-<div class="form-group">
-<label for="email">Email Address</label>
-<input type="email" id="email" placeholder="Enter your email (optional)">
-</div>
+    </div>
 
-<div class="form-group">
-<label for="car">Vehicle</label>
-<input type="text" id="car" placeholder="Example: Toyota Camry 2012" required>
-</div>
+  </div>
 
-<div class="form-group">
-<label for="service">Service Needed</label>
-
-<select id="service" required>
-
-<option value="">Select a service</option>
-
-<option value="Computer Diagnostics">
-Computer Diagnostics
-</option>
-
-<option value="Engine Electrical">
-Engine Electrical
-</option>
-
-<option value="Car Electrical">
-Car Electrical
-</option>
-
-<option value="Engine Fault Diagnosis">
-Engine Fault Diagnosis
-</option>
-
-<option value="Starting & Charging">
-Starting & Charging
-</option>
-
-<option value="Vehicle Inspection">
-Vehicle Inspection
-</option>
-
-<option value="Other">
-Other
-</option>
-
-</select>
-</div>
-
-<div class="form-group">
-<label for="date">Preferred Date</label>
-<input type="date" id="date" required>
-</div>
-
-<div class="form-group">
-<label for="time">Preferred Time</label>
-<input type="time" id="time" required>
-</div>
-
-<div class="form-group">
-<label for="message">Describe The Problem</label>
-
-<textarea
-id="message"
-placeholder="Tell us what is wrong with the vehicle..."
-required></textarea>
-
-</div>
-
-<button type="submit" class="submit-btn" id="submitBtn">
-SAVE BOOKING & SEND TO WHATSAPP
-</button>
-
-<div id="bookingStatus"></div>
-
-</form>
-
-</div>
-</div>
 </section>
 
 
-<section class="location" id="location">
+<!-- TESTIMONIALS -->
 
-<div class="container">
+<section class="testimonials">
 
-<div class="section-title">
-<small>Our Location</small>
-<h2>Find Us In Lagos</h2>
+  <div class="container">
 
-<p>
-Esan Michael Automotive — Lagos, Nigeria.
-</p>
-</div>
+    <div class="section-title">
+      <small>Customer Experience</small>
+      <h2>What Customers Say</h2>
+    </div>
 
-<div class="location-grid">
+    <div class="testimonial-grid">
 
-<div class="location-info">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>
+          Professional approach and proper attention to vehicle faults.
+        </p>
+        <strong>Customer</strong>
+      </div>
 
-<h3>Lagos, Nigeria</h3>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>
+          Good communication and clear explanation of the vehicle problem.
+        </p>
+        <strong>Customer</strong>
+      </div>
 
-<p>
-We provide automotive electrical and diagnostic
-services in Lagos.
-</p>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>
+          A convenient way to book automotive diagnostic services.
+        </p>
+        <strong>Customer</strong>
+      </div>
 
-<p>
-Contact us before coming so we can confirm the
-service location and availability.
-</p>
+    </div>
 
-<a class="btn btn-primary"
-href="https://www.google.com/maps/search/?api=1&query=Lagos%2C%20Nigeria"
-target="_blank">
-Open Google Maps
-</a>
+  </div>
 
-</div>
-
-<iframe
-class="map"
-src="https://www.google.com/maps?q=Lagos%2C%20Nigeria&output=embed"
-loading="lazy"
-allowfullscreen=""
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-</div>
-</div>
 </section>
 
+
+<!-- LOCATION / CONTACT -->
+
+<section class="location" id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+      <small>Contact Us</small>
+      <h2>Esan Michael Automotive</h2>
+      <p>Lagos, Nigeria</p>
+    </div>
+
+    <div class="location-box">
+
+      <div class="contact-card">
+
+        <h3>Get In Touch</h3>
+
+        <p>
+          Contact us directly for automotive diagnostics,
+          electrical services and vehicle inspection.
+        </p>
+
+        <a
+          class="contact-link"
+          href="tel:+2349064203806"
+        >
+          📞 +234 906 420 3806
+        </a>
+
+        <a
+          class="contact-link"
+          href="https://wa.me/2349064203806"
+        >
+          💬 WhatsApp: +234 906 420 3806
+        </a>
+
+        <p>
+          📍 Lagos, Nigeria
+        </p>
+
+      </div>
+
+      <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
 
 <section class="cta">
 
-<h2>Vehicle Problem?</h2>
+  <div class="container">
 
-<p>
-Contact Esan Michael Automotive today for professional
-automotive diagnostics and electrical services in Lagos.
-</p>
+    <h2>Need Your Vehicle Checked?</h2>
 
-<div class="buttons" style="justify-content:center;">
+    <p>
+      Book a service or contact us directly on WhatsApp.
+    </p>
 
-<a class="btn btn-primary"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20need%20help%20with%20my%20vehicle."
-target="_blank">
-WhatsApp Us
-</a>
+    <div class="buttons" style="justify-content:center;">
 
-<a class="btn btn-outline" href="tel:+2349064203806">
-Call 09064203806
-</a>
+      <a href="#booking" class="btn btn-main">
+        Book Now
+      </a>
 
-</div>
+      <a
+        href="https://wa.me/2349064203806"
+        class="btn btn-dark"
+      >
+        WhatsApp Us
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<img src="logo.png" alt="Esan Michael Automotive Logo">
+  <div class="container">
 
-<h3>Esan Michael Automotive</h3>
+    <p>
+      © 2026 Esan Michael Automotive. All Rights Reserved.
+    </p>
 
-<p>Professional Automotive Diagnostics & Electrical Services</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<p>Lagos, Nigeria</p>
-
-<div class="footer-links">
-
-<a href="https://wa.me/2349064203806" target="_blank">
-WhatsApp
-</a>
-
-<a href="tel:+2349064203806">
-Call
-</a>
-
-<a href="#booking">
-Book Service
-</a>
-
-<a href="#services">
-Services
-</a>
-
-</div>
-
-<p style="margin-top:20px;">
-© 2026 Esan Michael Automotive. All Rights Reserved.
-</p>
+  </div>
 
 </footer>
 
 
+<!-- WHATSAPP FLOATING BUTTON -->
+
 <a
-class="whatsapp"
-href="https://wa.me/2349064203806?text=Hello%20Esan%20Michael%20Automotive%2C%20I%20want%20to%20make%20a%20booking."
-target="_blank"
-aria-label="Contact Esan Michael Automotive on WhatsApp">
-☎
+  class="whatsapp"
+  href="https://wa.me/2349064203806"
+  aria-label="Chat on WhatsApp"
+>
+  WA
 </a>
 
 
 <!-- SUPABASE -->
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
+
+/* ==========================================
+   SUPABASE CONNECTION
+========================================== */
 
 const SUPABASE_URL =
 "https://ehcstijbenwinbdypjha.supabase.co";
@@ -1308,198 +1175,230 @@ const SUPABASE_PUBLISHABLE_KEY =
 
 const supabaseClient =
 window.supabase.createClient(
-SUPABASE_URL,
-SUPABASE_PUBLISHABLE_KEY
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
 );
 
 
-document
-.getElementById("bookingForm")
-.addEventListener("submit", async function(event){
+/* ==========================================
+   BOOKING FORM
+========================================== */
 
-event.preventDefault();
+const bookingForm =
+document.getElementById("bookingForm");
 
-const submitButton =
-document.getElementById("submitBtn");
+bookingForm.addEventListener(
+"submit",
+async function(event){
 
-const statusBox =
-document.getElementById("bookingStatus");
+  event.preventDefault();
 
+  const submitButton =
+  document.getElementById("submitBtn");
 
-const name =
-document.getElementById("name").value.trim();
+  const statusBox =
+  document.getElementById("bookingStatus");
 
-const phone =
-document.getElementById("phone").value.trim();
 
-const email =
-document.getElementById("email").value.trim();
+  /* GET FORM VALUES */
 
-const car =
-document.getElementById("car").value.trim();
+  const name =
+  document.getElementById("name").value.trim();
 
-const service =
-document.getElementById("service").value;
+  const phone =
+  document.getElementById("phone").value.trim();
 
-const date =
-document.getElementById("date").value;
+  const email =
+  document.getElementById("email").value.trim();
 
-const time =
-document.getElementById("time").value;
+  const car =
+  document.getElementById("car").value.trim();
 
-const message =
-document.getElementById("message").value.trim();
+  const service =
+  document.getElementById("service").value;
 
+  const date =
+  document.getElementById("date").value;
 
-if(
-!name ||
-!phone ||
-!car ||
-!service ||
-!date ||
-!time ||
-!message
-){
+  const time =
+  document.getElementById("time").value;
 
-statusBox.className="error";
+  const message =
+  document.getElementById("message").value.trim();
 
-statusBox.textContent=
-"Please fill in all required fields.";
 
-return;
+  /* CHECK REQUIRED INFORMATION */
 
-}
+  if(
+    !name ||
+    !phone ||
+    !car ||
+    !service ||
+    !date ||
+    !time ||
+    !message
+  ){
 
+    statusBox.className="error";
 
-submitButton.disabled=true;
+    statusBox.style.display="block";
 
-submitButton.textContent=
-"SAVING BOOKING...";
+    statusBox.textContent =
+    "Please fill in all required fields.";
 
+    return;
+  }
 
-try{
 
-/*
- IMPORTANT:
- Your Supabase table name is:
- Services booking
-*/
+  /* BUTTON */
 
-const {data,error} =
-await supabaseClient
-.from("Services booking")
-.insert([{
+  submitButton.disabled=true;
 
-name:name,
+  submitButton.textContent =
+  "SAVING BOOKING...";
 
-phone:phone,
+  statusBox.style.display="none";
 
-email:email || null,
 
-vehicle:car,
+  try{
 
-service:service,
+    /*
+      SAVE BOOKING TO SUPABASE
 
-booking_date:date,
+      IMPORTANT:
+      The table name below is:
+      Services booking
+    */
 
-booking_time:time,
+    const { data, error } =
+    await supabaseClient
+    .from("Services booking")
+    .insert([
+      {
+        name: name,
+        phone: phone,
+        email: email || null,
+        vehicle: car,
+        service: service,
+        booking_date: date,
+        booking_time: time,
+        message: message
+      }
+    ])
+    .select();
 
-message:message
 
-}]);
+    /* SUPABASE ERROR */
 
+    if(error){
 
-if(error){
+      console.error(
+        "SUPABASE BOOKING ERROR:",
+        error
+      );
 
-console.error(
-"SUPABASE ERROR:",
-error
-);
+      throw error;
+    }
 
-throw error;
 
-}
+    /* WHATSAPP MESSAGE */
 
+    const whatsappMessage =
+`Hello Esan Michael Automotive,
 
-/* WHATSAPP MESSAGE */
+*NEW SERVICE BOOKING*
 
-const whatsappMessage=
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not provided"}
+Vehicle: ${car}
+Service: ${service}
+Preferred Date: ${date}
+Preferred Time: ${time}
 
-"Hello Esan Michael Automotive,\n\n"+
-"*NEW SERVICE BOOKING*\n\n"+
-"Name: "+name+"\n"+
-"Phone: "+phone+"\n"+
-"Email: "+(email || "Not provided")+"\n"+
-"Vehicle: "+car+"\n"+
-"Service: "+service+"\n"+
-"Preferred Date: "+date+"\n"+
-"Preferred Time: "+time+"\n"+
-"Location: Lagos, Nigeria\n"+
-"Problem: "+message;
+Location: Lagos, Nigeria
 
+Problem:
+${message}`;
 
-const whatsappURL=
-"https://wa.me/2349064203806?text="+
-encodeURIComponent(whatsappMessage);
 
+    const whatsappURL =
+    "https://wa.me/2349064203806?text=" +
+    encodeURIComponent(whatsappMessage);
 
-/* SUCCESS */
 
-statusBox.className="success";
+    /* SUCCESS */
 
-statusBox.textContent=
-"Booking saved successfully! Opening WhatsApp...";
+    statusBox.className="success";
 
+    statusBox.style.display="block";
 
-window.open(
-whatsappURL,
-"_blank"
-);
+    statusBox.textContent =
+    "Booking saved successfully! Opening WhatsApp...";
 
 
-document
-.getElementById("bookingForm")
-.reset();
+    /*
+      OPEN WHATSAPP
+    */
 
+    window.location.href =
+    whatsappURL;
 
-submitButton.disabled=false;
 
-submitButton.textContent=
-"SAVE BOOKING & SEND TO WHATSAPP";
+    /*
+      RESET FORM
+    */
 
+    bookingForm.reset();
 
-}
-catch(error){
+  }
 
-console.error(error);
 
-statusBox.className="error";
+  catch(error){
 
-statusBox.textContent=
-"Booking could not be saved. Please try again or contact us on WhatsApp.";
+    console.error(
+      "BOOKING ERROR:",
+      error
+    );
 
 
-submitButton.disabled=false;
+    statusBox.className="error";
 
-submitButton.textContent=
-"SAVE BOOKING & SEND TO WHATSAPP";
+    statusBox.style.display="block";
 
-}
+
+    /*
+      SHOW REAL ERROR
+      SO WE KNOW EXACTLY WHAT IS WRONG
+    */
+
+    statusBox.textContent =
+    "Booking could not be saved.\n\n" +
+    "Supabase error: " +
+    (error.message || "Unknown error") +
+    "\n\nPlease contact us on WhatsApp.";
+
+
+    submitButton.disabled=false;
+
+    submitButton.textContent =
+    "SAVE BOOKING & SEND TO WHATSAPP";
+  }
 
 });
 
 
-/* TODAY'S DATE */
+/* ==========================================
+   PREVENT PAST BOOKING DATES
+========================================== */
 
 const dateInput =
 document.getElementById("date");
 
 const today =
-new Date()
-.toISOString()
-.split("T")[0];
+new Date().toISOString().split("T")[0];
 
-dateInput.min=today;
+dateInput.min = today;
 
 </script>
 
